@@ -24,7 +24,7 @@ cd backend
 pdm install
 
 # Install with optional dependencies (development, notebooks, visualization)
-pdm install -G dev -G notebooks -G viz
+pdm lock -G dev -G notebooks -G viz && pdm install -G dev -G notebooks -G viz
 
 # Copy environment template and configure
 cp .env.example .env
