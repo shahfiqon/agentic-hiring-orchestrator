@@ -7,5 +7,13 @@ with state updates.
 """
 
 from .orchestrator import orchestrator_node
+from .hr_agent import hr_agent_node
+from .tech_agent import tech_agent_node
+from .compliance_agent import compliance_agent_node
 
-__all__ = ["orchestrator_node"]
+__all__ = [
+    "orchestrator_node",
+    "hr_agent_node",
+    "tech_agent_node",
+    "compliance_agent_node",
+]
