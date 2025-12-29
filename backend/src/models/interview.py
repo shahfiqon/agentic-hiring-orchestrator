@@ -5,7 +5,7 @@ This module defines Pydantic models for interview generation:
 - InterviewPlan: Complete interview structure organized by interviewer role
 """
 
-from typing import Dict, List, Optional
+from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field, model_validator, ConfigDict
 
@@ -27,8 +27,7 @@ class InterviewQuestion(BaseModel):
         min_length=1,
         description="Rubric category this question probes (e.g., 'Agent Orchestration Depth')"
     )
-    interviewer_role: str = Field(
-        min_length=1,
+    interviewer_role: Literal["HR", "Tech", "Product", "Compliance"] = Field(
         description="Who should ask this question: 'HR', 'Tech', 'Product', or 'Compliance'"
     )
     what_to_listen_for: List[str] = Field(
@@ -110,7 +109,7 @@ class InterviewPlan(BaseModel):
 
     @model_validator(mode='after')
     def validate_interviewer_roles(self) -> 'InterviewPlan':
-        """Ensure all interviewer roles are valid."""
+        """Ensure all interviewer roles are valid and questions match their assigned role."""
         valid_roles = {"HR", "Tech", "Product", "Compliance"}
         invalid_roles = set(self.questions_by_interviewer.keys()) - valid_roles
 
@@ -125,6 +124,20 @@ class InterviewPlan(BaseModel):
             raise ValueError(
                 "Interview plan must include at least one question for at least one interviewer."
             )
+
+        # Validate that each question's interviewer_role matches the dict key
+        for role, questions in self.questions_by_interviewer.items():
+            for question in questions:
+                if question.interviewer_role != role:
+                    raise ValueError(
+                        f"Question interviewer_role mismatch: question has role '{question.interviewer_role}' "
+                        f"but is assigned to '{role}' interviewer. Question: '{question.question[:50]}...'"
+                    )
+                if question.interviewer_role not in valid_roles:
+                    raise ValueError(
+                        f"Question has invalid interviewer_role '{question.interviewer_role}'. "
+                        f"Valid roles: {valid_roles}"
+                    )
 
         return self
 

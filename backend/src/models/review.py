@@ -154,6 +154,10 @@ class AgentReview(BaseModel):
         min_length=1,
         description="Questions to ask in interview to validate assumptions or probe gaps"
     )
+    expected_rubric_categories: Optional[List[str]] = Field(
+        default=None,
+        description="Expected rubric category names for validation. If provided, category_scores must cover exactly these categories."
+    )
 
     @model_validator(mode='after')
     def validate_agent_role(self) -> 'AgentReview':
@@ -175,6 +179,32 @@ class AgentReview(BaseModel):
                 f"Duplicate category scores found: {set(duplicates)}. "
                 f"Each category must be scored exactly once."
             )
+        return self
+
+    @model_validator(mode='after')
+    def validate_rubric_category_coverage(self) -> 'AgentReview':
+        """Ensure category_scores cover all expected rubric categories exactly once, with no extras."""
+        if self.expected_rubric_categories is None:
+            return self
+
+        expected_set = set(self.expected_rubric_categories)
+        actual_set = {cs.category_name for cs in self.category_scores}
+
+        missing_categories = expected_set - actual_set
+        unexpected_categories = actual_set - expected_set
+
+        if missing_categories or unexpected_categories:
+            error_parts = []
+            if missing_categories:
+                error_parts.append(f"Missing categories: {sorted(missing_categories)}")
+            if unexpected_categories:
+                error_parts.append(f"Unexpected categories: {sorted(unexpected_categories)}")
+
+            raise ValueError(
+                f"Rubric category coverage validation failed. {'; '.join(error_parts)}. "
+                f"Expected categories: {sorted(expected_set)}"
+            )
+
         return self
 
     def get_score_for_category(self, category_name: str) -> Optional[CategoryScore]:

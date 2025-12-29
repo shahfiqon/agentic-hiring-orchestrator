@@ -1,0 +1,243 @@
+{
+  "examples": [
+    {
+      "candidate": "Senior AI Engineer - Agentic Systems Role",
+      "working_memory": {
+        "agent_role": "Tech",
+        "key_observations": [
+          {
+            "category": "Multi-Agent Systems",
+            "observation": "Built multi-agent resume evaluation system with 4 specialized agents (parser, skill matcher, bias detector, report generator) using LangGraph with production deployment",
+            "evidence_location": "Experience > Senior AI Engineer section, Project 1",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Multi-Agent Systems",
+            "observation": "Led migration from single-agent to hierarchical multi-agent architecture, reducing evaluation time by 40% - clear before/after metrics",
+            "evidence_location": "Experience > Senior AI Engineer section, Achievement 2",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "LLM Integration",
+            "observation": "Implemented agent state management using LangGraph's StateGraph with checkpointing for fault tolerance",
+            "evidence_location": "Experience > Senior AI Engineer section, Technical Details",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Production Experience",
+            "observation": "Production experience: 'processed 50K resumes/month' with monitoring dashboards for agent latency and LLM call rates",
+            "evidence_location": "Experience > Senior AI Engineer section, Scale Indicators",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "LLM Integration",
+            "observation": "Used structured outputs with Pydantic models for agent responses - aligns with modern LLM integration practices",
+            "evidence_location": "Experience > Senior AI Engineer section, Implementation Details",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Production Reliability",
+            "observation": "Built retry logic and fallback strategies for LLM failures - shows production reliability awareness",
+            "evidence_location": "Experience > Senior AI Engineer section, Reliability Features",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design",
+            "observation": "Limited system design details - unclear how agents coordinate at scale beyond basic state management",
+            "evidence_location": "N/A - absent from all sections",
+            "strength_or_risk": "risk"
+          },
+          {
+            "category": "Domain Knowledge",
+            "observation": "No mention of hiring domain knowledge, ATS integration, or recruiting workflows",
+            "evidence_location": "N/A - absent from all sections",
+            "strength_or_risk": "risk"
+          }
+        ],
+        "cross_references": [
+          {
+            "claim": "Expert in multi-agent orchestration with production experience",
+            "claim_location": "Summary > Headline",
+            "supporting_evidence": [
+              "Experience section shows 3 projects with multi-agent systems, all deployed to production",
+              "Monitoring dashboards and scale indicators (50K resumes/month) mentioned",
+              "Specific frameworks (LangGraph) and patterns (hierarchical agents) cited",
+              "Reliability features (retries, fallbacks) implemented"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "5+ years of LLM integration experience",
+            "claim_location": "Skills > Experience section",
+            "supporting_evidence": [
+              "Experience > Recent role (2022-present): Built LLM-based systems"
+            ],
+            "contradictory_evidence": [
+              "Timeline shows first LLM project in 2022 (3 years ago as of 2025)",
+              "Earlier roles (2018-2022) focused on traditional ML (recommendation systems, fraud detection)"
+            ],
+            "assessment": "contradictory"
+          },
+          {
+            "claim": "Deep expertise in production AI systems",
+            "claim_location": "Summary > Professional headline",
+            "supporting_evidence": [
+              "Resume shows production deployments with scale indicators (50K/month)",
+              "Monitoring, cost optimization, and reliability features mentioned",
+              "Multiple production systems across different roles"
+            ],
+            "contradictory_evidence": [
+              "'Deep expertise' is subjective - 3 years in production AI systems is solid but not necessarily 'deep'"
+            ],
+            "assessment": "partially-supported"
+          },
+          {
+            "claim": "FastAPI and Python expert",
+            "claim_location": "Skills > Programming Languages section",
+            "supporting_evidence": [
+              "Built FastAPI backends in last 2 roles (2022-present)",
+              "Mentions async/await, Pydantic, type hints in technical details",
+              "Python usage since 2020 documented"
+            ],
+            "contradictory_evidence": [
+              "Prior experience was in Java - Python experience is only ~5 years, not necessarily 'expert' level"
+            ],
+            "assessment": "partially-supported"
+          }
+        ],
+        "timeline_analysis": "Steady progression: Junior ML Engineer (2018-2020, traditional ML/recommendation systems) → Mid-level AI Engineer (2020-2022, fraud detection, starting Python/FastAPI) → Senior AI Engineer (2022-present, agentic systems focus). Each role shows increased scope and technical leadership. Clear domain pivot from traditional ML to agentic AI in 2022 - coincides with LLM boom. Recent focus (last 3 years) heavily weighted toward agent orchestration and LLM integration. Seniority trajectory aligns with titles: each jump shows expanded responsibilities and technical complexity. Job tenure is healthy: 2 years per role on average, suggesting stability without stagnation. Current role (2022-present, 3 years) is longest tenure, indicating potential readiness for next level or new challenge.",
+        "missing_information": [
+          "No mention of agent observability beyond basic monitoring - unclear debugging practices for multi-agent failures",
+          "Lacks scale indicators for agent coordination: how many concurrent agents? what throughput? latency SLAs?",
+          "No evidence of team collaboration, mentorship, or cross-functional leadership despite 'Senior' title",
+          "Missing hiring/recruiting domain knowledge - no ATS experience, no recruiter workflow understanding",
+          "No discussion of bias mitigation or fairness testing despite building candidate evaluation systems",
+          "Unclear system design depth: how are agent boundaries defined? what communication patterns? state consistency guarantees?"
+        ],
+        "ambiguities": [
+          "Resume says 'designed agentic workflow' but unclear if this was implemented, deployed, or just prototyped - needs clarification on implementation depth",
+          "'Improved system reliability' - what was baseline reliability? what was improvement? how measured? (uptime? error rate? latency?)",
+          "Claims 'experience with LLM guardrails' but no specific techniques mentioned - need details on content filtering, output validation, fallback strategies",
+          "'Led migration to hierarchical architecture' - what was team size? did you code it yourself or manage others? ownership unclear"
+        ]
+      }
+    },
+    {
+      "candidate": "Product Manager - Developer Tools Role",
+      "working_memory": {
+        "agent_role": "Product",
+        "key_observations": [
+          {
+            "category": "Product Leadership",
+            "observation": "PM at developer tools startup building API integration platform - 2 years experience managing developer-facing products",
+            "evidence_location": "Experience > Product Manager, DevTools Inc section",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Product Impact",
+            "observation": "Launched GraphQL API product with 500+ integrations and 10K+ developers using it - clear adoption metrics",
+            "evidence_location": "Experience > Product Manager section, Key Achievement",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Technical Depth",
+            "observation": "Background: former software engineer (3 years) before transitioning to PM - technical credibility",
+            "evidence_location": "Experience > Software Engineer section (2018-2021)",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Developer Experience",
+            "observation": "Built developer community program: office hours, Discord server, conference talks - developer relations experience",
+            "evidence_location": "Experience > Product Manager section, Community Initiatives",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Data-Driven Decision Making",
+            "observation": "Uses product analytics (Amplitude) to track API usage, integration success rates, and developer activation funnels",
+            "evidence_location": "Experience > Product Manager section, Analytics Tools",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Product Strategy",
+            "observation": "No mention of multi-year product strategy or vision - appears execution-focused",
+            "evidence_location": "N/A - absent from all sections",
+            "strength_or_risk": "risk"
+          },
+          {
+            "category": "Enterprise Scale",
+            "observation": "Limited experience with large-scale platforms (current company is startup with small eng team ~15 people)",
+            "evidence_location": "Experience > Product Manager section, Company Context",
+            "strength_or_risk": "risk"
+          }
+        ],
+        "cross_references": [
+          {
+            "claim": "Technical Product Manager with engineering background",
+            "claim_location": "Summary > Professional headline",
+            "supporting_evidence": [
+              "Resume shows 3 years as software engineer (2018-2021)",
+              "Current role involves API design reviews and technical documentation",
+              "Close engineering collaboration mentioned in multiple projects"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Deep expertise in developer tools and platforms",
+            "claim_location": "Summary > Headline",
+            "supporting_evidence": [
+              "2 years of PM experience in developer tools (2023-present)",
+              "1 year prior at SaaS company building internal tools (2021-2023)"
+            ],
+            "contradictory_evidence": [
+              "Total developer tools experience is only ~3 years",
+              "'Deep expertise' seems overstated for 2-3 years in the domain"
+            ],
+            "assessment": "partially-supported"
+          },
+          {
+            "claim": "Data-driven product leader",
+            "claim_location": "Summary > Core Competencies",
+            "supporting_evidence": [
+              "Uses Amplitude for product analytics",
+              "Tracks metrics: API usage, integrations, activation",
+              "Conducted A/B tests on pricing strategy"
+            ],
+            "contradictory_evidence": [
+              "Limited depth - no mention of advanced experimentation or causal analysis"
+            ],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Launched products used by thousands of developers",
+            "claim_location": "Summary > Key Achievements",
+            "supporting_evidence": [
+              "GraphQL API has 10K+ developers and 500+ integrations",
+              "CLI tool mentions 'growing user base'"
+            ],
+            "contradictory_evidence": [
+              "Scale is modest (10K developers is good for startup, not massive scale like 100K+)"
+            ],
+            "assessment": "well-supported"
+          }
+        ],
+        "timeline_analysis": "Career progression: Software Engineer (2018-2021, 3 years, backend focus) → Associate PM (2021-2023, 2 years, internal tools SaaS company) → Product Manager (2023-present, 2 years, developer tools startup). Clear transition from IC engineer to product management. Each role builds on previous: engineering background → internal tools PM → external developer products PM. Tenure pattern is consistent: 2-3 years per role, suggesting openness to new opportunities. Recent experience (last 2 years) is most relevant: developer-facing products at startup. Title progression is modest: Associate PM → PM (no Senior yet), aligns with 4 years total PM experience. Engineering background provides technical credibility but is now 4 years old - may be slightly dated on latest tech.",
+        "missing_information": [
+          "No mention of product strategy or multi-year vision - appears tactically focused on execution",
+          "Lacks experience with large platforms or enterprise scale (startup background only)",
+          "No evidence of executive stakeholder management or C-level communication",
+          "Missing: competitive analysis, market positioning, or go-to-market strategy details",
+          "Unclear pricing/monetization expertise beyond one usage-based pricing project",
+          "No mention of cross-functional team size or organizational complexity managed"
+        ],
+        "ambiguities": [
+          "'Drove API adoption from 0 to 10K developers' - what specific actions drove growth? Product improvements? Marketing? Developer relations? Attribution unclear",
+          "'Collaborated with engineering on API design' - what level of technical depth? Design reviews only or hands-on prototyping?",
+          "Mentions 'product strategy' but no examples of strategic decisions or vision - need clarification on strategic thinking depth",
+          "'Increased revenue by 35% through pricing changes' - was this the primary driver or were there other factors? Need context on attribution"
+        ]
+      }
+    }
+  ]
+}

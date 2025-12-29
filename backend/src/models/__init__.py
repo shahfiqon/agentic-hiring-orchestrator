@@ -5,26 +5,32 @@ This package contains Pydantic models for:
 - Reviews: Agent evaluations with evidence
 - Packets: Decision synthesis and recommendations
 - Interviews: Question generation for follow-up
+- Memory: Working memory for two-pass evaluation
 """
 
-from .rubric import ScoringCriteria, RubricCategory, Rubric
-from .review import Evidence, CategoryScore, AgentReview
-from .packet import Disagreement, DecisionPacket
 from .interview import InterviewQuestion, InterviewPlan
+from .memory import CrossReference, KeyObservation, WorkingMemory
+from .packet import Disagreement, DecisionPacket
+from .review import AgentReview, CategoryScore, Evidence
+from .rubric import Rubric, RubricCategory, ScoringCriteria
 
 __all__ = [
-    # Rubric models
-    "ScoringCriteria",
-    "RubricCategory",
-    "Rubric",
-    # Review models
-    "Evidence",
-    "CategoryScore",
-    "AgentReview",
-    # Packet models
-    "Disagreement",
-    "DecisionPacket",
     # Interview models
-    "InterviewQuestion",
     "InterviewPlan",
+    "InterviewQuestion",
+    # Memory models
+    "CrossReference",
+    "KeyObservation",
+    "WorkingMemory",
+    # Packet models
+    "DecisionPacket",
+    "Disagreement",
+    # Review models
+    "AgentReview",
+    "CategoryScore",
+    "Evidence",
+    # Rubric models
+    "Rubric",
+    "RubricCategory",
+    "ScoringCriteria",
 ]

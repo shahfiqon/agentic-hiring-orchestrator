@@ -1,0 +1,378 @@
+{
+  "examples": [
+    {
+      "role": "Senior AI Engineer - Agentic Systems",
+      "rubric": {
+        "categories": [
+          {
+            "name": "Agent Orchestration Depth",
+            "description": "Experience designing and implementing multi-agent systems with complex coordination patterns, state management, and orchestration logic",
+            "weight": 0.25,
+            "is_must_have": true,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "No evidence of multi-agent system experience; only single-agent or basic LLM API usage",
+                "indicators": [
+                  "Resume mentions only ChatGPT API calls or basic prompt engineering",
+                  "No mention of agent coordination, workflows, or orchestration",
+                  "Experience limited to chatbot UIs or simple Q&A systems"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Some multi-agent experience but limited complexity or scale; may be experimental or academic",
+                "indicators": [
+                  "Built proof-of-concept multi-agent systems (e.g., AutoGPT-style projects)",
+                  "Experience with agent frameworks (LangChain, CrewAI) but unclear production usage",
+                  "Mentions 'agentic workflows' but lacks detail on orchestration complexity"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Deep production experience with complex multi-agent orchestration, state management, and coordination patterns",
+                "indicators": [
+                  "Designed production systems with 3+ specialized agents working in coordination",
+                  "Implemented advanced patterns: hierarchical agents, planning/execution splits, reflection loops",
+                  "Clear evidence of handling agent state, memory, context management at scale",
+                  "Experience with production observability for multi-agent systems"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "LLM Integration Expertise",
+            "description": "Practical experience integrating LLMs into production systems with reliability, cost management, and structured outputs",
+            "weight": 0.20,
+            "is_must_have": true,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "No production LLM integration experience; only API exploration or tutorials",
+                "indicators": [
+                  "Experience limited to LLM playgrounds or notebook experiments",
+                  "No mention of production deployment, error handling, or reliability",
+                  "Resume shows only basic API usage without production context"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Some production LLM integration but limited scope or maturity",
+                "indicators": [
+                  "Integrated LLMs into production systems with basic error handling",
+                  "Experience with prompt engineering and basic output parsing",
+                  "Mentions cost awareness but unclear optimization strategies"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Extensive production LLM integration with advanced reliability and optimization techniques",
+                "indicators": [
+                  "Implemented structured outputs, function calling, or tool use in production",
+                  "Built retry logic, fallback strategies, and guardrails for LLM failures",
+                  "Optimized LLM costs through caching, prompt compression, or model selection",
+                  "Experience with LLM observability: logging, tracing, latency monitoring"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Python & FastAPI Proficiency",
+            "description": "Strong Python engineering skills with FastAPI backend development experience",
+            "weight": 0.20,
+            "is_must_have": false,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "Limited Python experience; primarily uses other languages",
+                "indicators": [
+                  "Python listed but not featured in recent projects",
+                  "No backend framework experience mentioned",
+                  "Experience appears limited to scripts or data analysis"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Solid Python experience with some backend development",
+                "indicators": [
+                  "Built backend services in Python (Flask, Django, or FastAPI)",
+                  "Experience with async Python or API design",
+                  "Comfortable with Python typing, Pydantic, or similar tools"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Expert Python backend engineer with FastAPI production experience",
+                "indicators": [
+                  "Extensive FastAPI experience in production systems",
+                  "Advanced Python patterns: async/await, type hints, dependency injection",
+                  "Experience with Pydantic models, validation, and settings management",
+                  "Built scalable Python services with proper error handling and testing"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "System Design & Architecture",
+            "description": "Ability to design scalable, maintainable systems with thoughtful architectural decisions",
+            "weight": 0.20,
+            "is_must_have": false,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "No evidence of system design experience; primarily implements features from specs",
+                "indicators": [
+                  "Resume focuses on coding tasks without architectural context",
+                  "No mention of design decisions, tradeoffs, or system planning",
+                  "Experience limited to small scripts or single-component projects"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Some system design experience with mid-sized projects",
+                "indicators": [
+                  "Designed APIs or backend services with multiple components",
+                  "Experience with databases, caching, or message queues",
+                  "Shows awareness of scalability or maintainability concerns"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Strong system design skills with experience architecting complex systems",
+                "indicators": [
+                  "Designed distributed systems or microservices architectures",
+                  "Made architectural decisions on state management, data flow, or service boundaries",
+                  "Experience with system scalability, fault tolerance, or performance optimization",
+                  "Clear evidence of designing for maintainability and extensibility"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Domain Knowledge: Hiring/Recruiting Tech",
+            "description": "Understanding of hiring workflows, ATS systems, or recruiting domain challenges",
+            "weight": 0.15,
+            "is_must_have": false,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "No hiring or recruiting domain experience",
+                "indicators": [
+                  "Resume shows no work in HR tech, recruiting, or talent management",
+                  "No mention of ATS, resume parsing, or candidate evaluation systems",
+                  "Domain experience is entirely outside hiring/recruiting"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Some exposure to hiring workflows or recruiting technology",
+                "indicators": [
+                  "Built internal tools for hiring or candidate management",
+                  "Experience with ATS integrations or resume parsing",
+                  "Worked on HR-adjacent projects (e.g., employee management, onboarding)"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Deep domain expertise in hiring tech or recruiting systems",
+                "indicators": [
+                  "Built or maintained ATS systems, recruiting platforms, or candidate evaluation tools",
+                  "Experience with resume parsing, candidate matching, or interview scheduling",
+                  "Clear understanding of hiring workflows and recruiter pain points",
+                  "Work in talent acquisition, HR tech, or recruiting SaaS"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "role": "Product Manager - Developer Tools",
+      "rubric": {
+        "categories": [
+          {
+            "name": "Developer Tools Product Experience",
+            "description": "Direct experience building or managing developer-focused products, tools, or platforms",
+            "weight": 0.30,
+            "is_must_have": true,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "No developer tools or platform experience; consumer product focus only",
+                "indicators": [
+                  "Resume shows only consumer-facing products (B2C apps, e-commerce, social media)",
+                  "No mention of APIs, SDKs, CLI tools, or developer platforms",
+                  "No evidence of understanding developer personas or workflows"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Some developer tools exposure but limited scope or depth",
+                "indicators": [
+                  "Worked on internal developer tools but not external products",
+                  "Managed APIs or integrations as part of larger product",
+                  "Basic understanding of developer needs but limited execution experience"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Extensive developer tools product experience with successful launches",
+                "indicators": [
+                  "Led developer-facing products: APIs, SDKs, CLI tools, developer platforms",
+                  "Clear understanding of developer personas, adoption drivers, and friction points",
+                  "Shipped products with strong developer adoption metrics (DAU, integrations, API calls)",
+                  "Experience with developer relations, documentation, or community building"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Technical Depth & Engineering Collaboration",
+            "description": "Technical background enabling effective collaboration with engineering teams and technical decision-making",
+            "weight": 0.25,
+            "is_must_have": true,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "Non-technical background with limited engineering interaction",
+                "indicators": [
+                  "No engineering background or technical skills mentioned",
+                  "Resume suggests handoff-style product management without deep technical collaboration",
+                  "Unable to evaluate technical tradeoffs or architecture decisions"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Technical literacy with ability to collaborate on engineering decisions",
+                "indicators": [
+                  "Technical degree or bootcamp background",
+                  "Can read code and understand technical concepts",
+                  "Works closely with engineering but defers most technical decisions"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Strong technical background with engineering experience or deep technical product expertise",
+                "indicators": [
+                  "Prior engineering role or extensive coding experience",
+                  "Makes technical product decisions: API design, architecture, performance tradeoffs",
+                  "Can prototype, review PRs, or debug issues alongside engineering",
+                  "Earns respect from engineering teams through technical credibility"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Product Strategy & Vision",
+            "description": "Ability to define product strategy, roadmap, and long-term vision aligned with market needs",
+            "weight": 0.20,
+            "is_must_have": false,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "Execution-focused PM without strategic product thinking",
+                "indicators": [
+                  "Resume emphasizes feature delivery without strategic context",
+                  "No mention of roadmap planning, market analysis, or competitive positioning",
+                  "Appears to take direction rather than set direction"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Can develop product roadmaps with some strategic thinking",
+                "indicators": [
+                  "Created product roadmaps aligned with business goals",
+                  "Conducted user research or market analysis to inform decisions",
+                  "Balances short-term execution with longer-term planning"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Strong product strategist with clear vision and market insights",
+                "indicators": [
+                  "Defined product vision and multi-year strategy",
+                  "Deep market understanding: competitive landscape, trends, positioning",
+                  "Successfully pivoted products or identified new market opportunities",
+                  "Aligned cross-functional teams around clear product vision"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Data-Driven Decision Making",
+            "description": "Use of metrics, analytics, and experimentation to inform product decisions",
+            "weight": 0.15,
+            "is_must_have": false,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "Limited data or analytics usage; intuition-driven decisions",
+                "indicators": [
+                  "No mention of metrics, KPIs, or data analysis",
+                  "Decisions appear based on opinions rather than data",
+                  "No A/B testing or experimentation experience"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Uses data to inform decisions with basic analytics",
+                "indicators": [
+                  "Tracks product metrics and KPIs",
+                  "Conducts basic A/B tests or experiments",
+                  "Makes data-informed decisions on feature prioritization"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Sophisticated data-driven approach with advanced analytics and experimentation",
+                "indicators": [
+                  "Built comprehensive metrics frameworks and dashboards",
+                  "Advanced experimentation: multi-variate tests, holdout analysis, causal inference",
+                  "Uses data to uncover insights and drive product innovation",
+                  "Experience with product analytics tools (Amplitude, Mixpanel, custom dashboards)"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Stakeholder Management & Communication",
+            "description": "Ability to align stakeholders, communicate effectively, and drive cross-functional execution",
+            "weight": 0.10,
+            "is_must_have": false,
+            "scoring_criteria": [
+              {
+                "score_value": 0,
+                "description": "Limited stakeholder management or cross-functional leadership",
+                "indicators": [
+                  "Resume suggests individual contributor focus without cross-functional work",
+                  "No evidence of executive communication or stakeholder alignment",
+                  "Works primarily within single team or function"
+                ]
+              },
+              {
+                "score_value": 3,
+                "description": "Effective stakeholder management within product teams",
+                "indicators": [
+                  "Aligns engineering, design, and business stakeholders",
+                  "Communicates product updates and roadmaps to leadership",
+                  "Resolves conflicts and drives consensus on product decisions"
+                ]
+              },
+              {
+                "score_value": 5,
+                "description": "Expert stakeholder manager with executive influence and cross-org impact",
+                "indicators": [
+                  "Manages C-level stakeholders and drives executive alignment",
+                  "Influences product strategy across multiple teams or business units",
+                  "Exceptional communicator: writes compelling docs, presents to large audiences",
+                  "Builds consensus across conflicting stakeholder priorities"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

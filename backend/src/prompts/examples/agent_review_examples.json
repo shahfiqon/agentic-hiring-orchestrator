@@ -1,0 +1,386 @@
+{
+  "examples": [
+    {
+      "candidate": "Senior AI Engineer - Agentic Systems Role",
+      "agent_role": "HR",
+      "review": {
+        "agent_role": "HR",
+        "category_scores": [
+          {
+            "category_name": "Agent Orchestration Depth",
+            "score": 5,
+            "evidence": [
+              {
+                "resume_text": "Built multi-agent resume evaluation system with 4 specialized agents using LangGraph - production deployment with 50K resumes/month",
+                "line_reference": "Experience > Senior AI Engineer section, Project 1",
+                "interpretation": "Demonstrates production multi-agent experience with clear scale indicators and advanced framework usage"
+              },
+              {
+                "resume_text": "Led migration from single-agent to hierarchical multi-agent architecture, reducing evaluation time by 40%",
+                "line_reference": "Experience > Senior AI Engineer section, Achievement 2",
+                "interpretation": "Shows architectural leadership with measurable impact, appropriate for Senior title"
+              }
+            ],
+            "gaps": [],
+            "confidence": "high"
+          },
+          {
+            "category_name": "LLM Integration Expertise",
+            "score": 5,
+            "evidence": [
+              {
+                "resume_text": "Implemented structured outputs with Pydantic models, retry logic, and fallback strategies for LLM failures",
+                "line_reference": "Experience > Senior AI Engineer section, Technical Implementation",
+                "interpretation": "Demonstrates advanced LLM integration practices and production reliability awareness"
+              },
+              {
+                "resume_text": "Designed API rate limiting and caching layer to optimize LLM costs",
+                "line_reference": "Experience > Senior AI Engineer section, Cost Optimization",
+                "interpretation": "Shows production cost awareness and architectural thinking for LLM systems"
+              }
+            ],
+            "gaps": [
+              "Resume claims '5+ years LLM experience' but timeline shows first LLM work in 2022 (3 years ago) - inflated claim"
+            ],
+            "confidence": "high"
+          },
+          {
+            "category_name": "Python & FastAPI Proficiency",
+            "score": 5,
+            "evidence": [
+              {
+                "resume_text": "FastAPI backend with async/await patterns - used in production systems",
+                "line_reference": "Experience > Senior AI Engineer section, Backend Implementation",
+                "interpretation": "Demonstrates modern FastAPI practices with async patterns for 3+ years"
+              },
+              {
+                "resume_text": "Experience with Pydantic models, validation, and structured outputs",
+                "line_reference": "Experience > Senior AI Engineer section, Technical Stack",
+                "interpretation": "Shows proficiency with modern Python type safety and validation practices"
+              }
+            ],
+            "gaps": [],
+            "confidence": "high"
+          },
+          {
+            "category_name": "System Design & Architecture",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Led migration from single-agent to hierarchical multi-agent architecture",
+                "line_reference": "Experience > Senior AI Engineer section, Architecture",
+                "interpretation": "Shows architectural leadership and design ownership"
+              },
+              {
+                "resume_text": "Designed API rate limiting and caching layer",
+                "line_reference": "Experience > Senior AI Engineer section, API Design",
+                "interpretation": "Demonstrates understanding of API architecture and performance optimization"
+              }
+            ],
+            "gaps": [
+              "Unclear agent coordination at scale beyond basic state management",
+              "Missing details on service boundaries and state consistency guarantees",
+              "No mention of distributed systems or advanced fault tolerance",
+              "Ambiguous ownership: 'led migration' could be hands-on design or people management"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "Domain Knowledge: Hiring/Recruiting Tech",
+            "score": 0,
+            "evidence": [
+              {
+                "resume_text": "No mention of ATS, resume parsing systems, or hiring workflows in resume",
+                "line_reference": "N/A - absent from all sections",
+                "interpretation": "Clear gap in hiring domain knowledge despite building resume evaluation system"
+              }
+            ],
+            "gaps": [
+              "No ATS experience mentioned",
+              "No recruiter workflow understanding",
+              "No evidence of understanding hiring domain despite building evaluation tools"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "overall_assessment": "Strong Senior-level candidate with genuine production agentic systems expertise, though experience timeline is inflated. Career trajectory is solid with healthy progression and increasing technical complexity. Biggest concern is lack of hiring domain knowledge for a recruiting tech role, plus credibility gap from inflated LLM tenure claim.",
+        "top_strengths": [
+          "Strong production agentic systems experience with clear scale indicators (50K resumes/month) and advanced patterns (hierarchical agents, state management)",
+          "Leadership impact: led architecture migration with measurable improvement (40% evaluation time reduction)",
+          "Career trajectory is healthy: steady progression from Junior to Senior over 7 years with clear skill development"
+        ],
+        "top_risks": [
+          "Inflated experience claim: resume says '5+ years LLM experience' but timeline shows first LLM project in 2022 (3 years ago)",
+          "Missing hiring domain knowledge despite building resume evaluation systems",
+          "Limited evidence of team collaboration, mentorship, or cross-functional leadership despite Senior title"
+        ],
+        "follow_up_questions": [
+          "Your resume claims '5+ years of LLM integration experience' but your timeline shows first LLM work in 2022. Can you clarify?",
+          "You built a resume evaluation system but don't mention ATS integration. How did you ensure your system met recruiter needs?",
+          "You 'led migration to hierarchical architecture' - what was your team size? What was your specific role?",
+          "How did you debug multi-agent failures in production? What observability tools did you use?"
+        ]
+      }
+    },
+    {
+      "candidate": "Senior AI Engineer - Agentic Systems Role",
+      "agent_role": "Tech",
+      "review": {
+        "agent_role": "Tech",
+        "category_scores": [
+          {
+            "category_name": "Agent Orchestration Depth",
+            "score": 5,
+            "evidence": [
+              {
+                "resume_text": "Built multi-agent system with 4 specialized agents (parser, skill matcher, bias detector, report generator) using LangGraph - production deployment",
+                "line_reference": "Experience > Senior AI Engineer section, Multi-Agent Project",
+                "interpretation": "Production-grade multi-agent work with specific agents and framework, not a toy demo"
+              },
+              {
+                "resume_text": "Implemented state management using LangGraph's StateGraph with checkpointing for fault tolerance",
+                "line_reference": "Experience > Senior AI Engineer section, Technical Details",
+                "interpretation": "Advanced pattern usage showing deep understanding of stateful agent systems"
+              },
+              {
+                "resume_text": "Processing 50K resumes/month with monitoring dashboards for agent latency",
+                "line_reference": "Experience > Senior AI Engineer section, Scale Indicators",
+                "interpretation": "Clear production scale and observability, confirming genuine production deployment"
+              }
+            ],
+            "gaps": [],
+            "confidence": "high"
+          },
+          {
+            "category_name": "LLM Integration Expertise",
+            "score": 5,
+            "evidence": [
+              {
+                "resume_text": "Implemented structured outputs with Pydantic models for agent responses",
+                "line_reference": "Experience > Senior AI Engineer section, LLM Integration",
+                "interpretation": "Modern best practice for LLM integration, shows awareness of latest patterns"
+              },
+              {
+                "resume_text": "Built retry logic, fallback strategies, rate limiting, and caching for LLM cost optimization",
+                "line_reference": "Experience > Senior AI Engineer section, Reliability & Cost",
+                "interpretation": "Production reliability and cost awareness, critical for production LLM systems"
+              }
+            ],
+            "gaps": [],
+            "confidence": "high"
+          },
+          {
+            "category_name": "Python & FastAPI Proficiency",
+            "score": 5,
+            "evidence": [
+              {
+                "resume_text": "FastAPI backend with async/await patterns",
+                "line_reference": "Experience > Senior AI Engineer section, Backend Stack",
+                "interpretation": "Modern async Python patterns, appropriate for Senior-level backend work"
+              },
+              {
+                "resume_text": "Designed API rate limiting and caching layer",
+                "line_reference": "Experience > Senior AI Engineer section, API Architecture",
+                "interpretation": "Architectural FastAPI usage beyond basic CRUD, shows depth"
+              }
+            ],
+            "gaps": [],
+            "confidence": "high"
+          },
+          {
+            "category_name": "System Design & Architecture",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Led migration from single-agent to hierarchical architecture",
+                "line_reference": "Experience > Senior AI Engineer section, Architecture Migration",
+                "interpretation": "Shows design ownership and architectural thinking"
+              },
+              {
+                "resume_text": "Designed rate limiting and caching",
+                "line_reference": "Experience > Senior AI Engineer section, API Design",
+                "interpretation": "Basic API architecture patterns, but lacks depth on scaling or distributed systems"
+              }
+            ],
+            "gaps": [
+              "Unclear agent coordination at scale beyond basic state management",
+              "No mention of distributed systems or advanced fault tolerance",
+              "Missing scalability planning details",
+              "Limited observability depth: 'no mention of agent debugging practices beyond basic monitoring'"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "Domain Knowledge: Hiring/Recruiting Tech",
+            "score": 0,
+            "evidence": [
+              {
+                "resume_text": "No mention of ATS, resume parsing standards, or hiring workflows",
+                "line_reference": "N/A - absent from all sections",
+                "interpretation": "Zero hiring domain knowledge despite building resume evaluation system"
+              }
+            ],
+            "gaps": [
+              "No ATS experience",
+              "No understanding of recruiter needs or candidate experience",
+              "Missing hiring process knowledge"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "overall_assessment": "Solid Senior-level technical skills with genuine production agentic systems experience. Not a toy demo builder - has real scale and production maturity. However, system design depth is limited to mid-sized applications, and hiring domain knowledge is completely missing. Technical depth is strong but narrow.",
+        "top_strengths": [
+          "Production multi-agent systems with advanced patterns and real scale (50K resumes/month) - not a toy demo",
+          "Modern LLM integration practices: structured outputs, retry logic, cost optimization, monitoring",
+          "Strong Python/FastAPI skills with 3 years of production backend experience"
+        ],
+        "top_risks": [
+          "Limited system design depth beyond mid-sized applications - missing distributed systems or large-scale architecture",
+          "Zero hiring domain knowledge despite building hiring tools - may miss critical domain requirements",
+          "Missing observability depth: unclear production debugging skills beyond basic monitoring"
+        ],
+        "follow_up_questions": [
+          "How did you handle state consistency when agents needed to share context across 50K resumes/month?",
+          "How did you debug multi-agent failures in production? What observability tools did you use for distributed tracing?",
+          "How did your system fit into existing recruiting workflows? What recruiter feedback informed your design?",
+          "Describe a time when your LLM fallback strategies kicked in. What was the failure mode and how did your system recover?"
+        ]
+      }
+    },
+    {
+      "candidate": "Senior AI Engineer - Agentic Systems Role",
+      "agent_role": "Compliance",
+      "review": {
+        "agent_role": "Compliance",
+        "category_scores": [
+          {
+            "category_name": "Agent Orchestration Depth",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Built multi-agent resume evaluation system processing 50K resumes/month",
+                "line_reference": "Experience > Senior AI Engineer section, Production System",
+                "interpretation": "Handles significant PII volume, raising data governance questions"
+              },
+              {
+                "resume_text": "Mentions 'bias detector agent'",
+                "line_reference": "Experience > Senior AI Engineer section, Agent Components",
+                "interpretation": "Shows awareness of fairness concerns, but no details on bias types or testing methodology"
+              }
+            ],
+            "gaps": [
+              "No discussion of bias mitigation or fairness testing methodology",
+              "Missing details on what bias types are detected",
+              "No mention of fairness metrics or compliance considerations"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "LLM Integration Expertise",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Implemented structured outputs with Pydantic",
+                "line_reference": "Experience > Senior AI Engineer section, LLM Implementation",
+                "interpretation": "Provides validation but unclear privacy controls for PII in LLM processing"
+              },
+              {
+                "resume_text": "Built retry logic and fallback strategies",
+                "line_reference": "Experience > Senior AI Engineer section, Reliability",
+                "interpretation": "Shows reliability awareness but no mention of data privacy in LLM API calls or logging"
+              }
+            ],
+            "gaps": [
+              "Claims 'experience with LLM guardrails' but no specific techniques mentioned",
+              "No details on content filtering, output validation, or harmful content detection",
+              "Missing data anonymization or PII redaction for LLM processing",
+              "No mention of GDPR/CCPA considerations for LLM data handling"
+            ],
+            "confidence": "low"
+          },
+          {
+            "category_name": "Python & FastAPI Proficiency",
+            "score": 5,
+            "evidence": [
+              {
+                "resume_text": "FastAPI backend with Pydantic models",
+                "line_reference": "Experience > Senior AI Engineer section, Backend Stack",
+                "interpretation": "Provides request validation and type safety, reducing data handling errors"
+              },
+              {
+                "resume_text": "Async/await patterns",
+                "line_reference": "Experience > Senior AI Engineer section, Implementation",
+                "interpretation": "Supports secure concurrent processing, no security red flags in technical implementation"
+              }
+            ],
+            "gaps": [],
+            "confidence": "high"
+          },
+          {
+            "category_name": "System Design & Architecture",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Designed rate limiting and caching layer",
+                "line_reference": "Experience > Senior AI Engineer section, API Design",
+                "interpretation": "Good for DoS protection and performance, shows some security consciousness"
+              },
+              {
+                "resume_text": "State management with checkpointing",
+                "line_reference": "Experience > Senior AI Engineer section, State Management",
+                "interpretation": "But unclear if checkpoints are encrypted or how long they're retained - potential compliance issue"
+              }
+            ],
+            "gaps": [
+              "No details on data retention policies for 50K resumes/month",
+              "Missing access control information",
+              "No mention of audit logging",
+              "Unclear checkpoint encryption or retention practices"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "Domain Knowledge: Hiring/Recruiting Tech",
+            "score": 0,
+            "evidence": [
+              {
+                "resume_text": "No mention of ATS, hiring workflows, or talent acquisition domain",
+                "line_reference": "N/A - absent from all sections",
+                "interpretation": "Major compliance risk - AI hiring systems are subject to EEOC regulations, adverse impact analysis, and algorithmic fairness requirements"
+              },
+              {
+                "resume_text": "Built resume evaluation system but no evidence of understanding compliance requirements",
+                "line_reference": "Experience > Senior AI Engineer section",
+                "interpretation": "Building hiring tools without understanding compliance landscape is high-risk"
+              }
+            ],
+            "gaps": [
+              "No understanding of EEOC regulations for AI hiring",
+              "Missing adverse impact analysis knowledge",
+              "No awareness of algorithmic fairness requirements for hiring systems"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "overall_assessment": "Significant compliance risks due to missing privacy safeguards, unclear bias mitigation practices, and lack of hiring domain compliance knowledge. While technical implementation appears sound, compliance awareness is insufficient for AI-driven hiring systems handling sensitive PII at scale. Requires strong compliance training and oversight.",
+        "top_strengths": [
+          "Built bias detector agent showing awareness of fairness concerns - though details are missing, this is a positive signal",
+          "FastAPI with Pydantic provides good validation and type safety - reduces data handling errors",
+          "Rate limiting and caching show some security consciousness - helps prevent abuse"
+        ],
+        "top_risks": [
+          "No discussion of bias mitigation, fairness testing, or algorithmic compliance despite building AI-driven candidate evaluation",
+          "Missing privacy safeguards: no mention of PII handling, data anonymization, or GDPR/CCPA considerations for 50K resumes/month",
+          "Zero hiring domain knowledge suggests unawareness of EEOC regulations and adverse impact analysis requirements"
+        ],
+        "follow_up_questions": [
+          "Your resume mentions a 'bias detector agent'. What types of bias did it detect? How did you test for fairness and adverse impact?",
+          "How did you handle PII in 50K resumes/month? What privacy protections did you implement (anonymization, encryption, access controls)?",
+          "What data retention policies did you implement? How do you handle right-to-be-forgotten requests?",
+          "What specific LLM guardrails did you implement for harmful content, PII leakage, or biased outputs?",
+          "Are you familiar with EEOC regulations for AI-driven hiring tools? How would you ensure compliance with adverse impact analysis?"
+        ]
+      }
+    }
+  ]
+}
