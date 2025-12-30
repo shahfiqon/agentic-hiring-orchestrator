@@ -78,7 +78,7 @@ The frontend will be running at http://localhost:3000
 
 4. Fill in the form:
    - **Job Description**: Paste a job description (minimum 50 characters)
-   - **Resume**: Paste a candidate's resume (minimum 100 characters)
+   - **Resume**: Paste a candidate's resume
    - **Company Context** (optional): Add any additional context
 
 5. Click "Start Evaluation"
@@ -148,7 +148,7 @@ PORT=3001 npm run dev
 
 **Issue**: Validation errors
 - Ensure job description is at least 50 characters
-- Ensure resume is at least 100 characters
+- Ensure resume field is not empty
 - Check that all required fields are filled
 
 ## Running in Production

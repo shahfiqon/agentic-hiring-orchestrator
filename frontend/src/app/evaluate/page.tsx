@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Container } from '@/components/Container';
@@ -8,8 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/Card';
 import { Button } from '@/components/Button';
 import { Alert } from '@/components/Alert';
 import { evaluationSchema, type EvaluationFormData } from '@/lib/validation';
-import { FileText, Upload, Download, ArrowLeft } from 'lucide-react';
-import type { ApiError, EvaluationResponse } from '@/lib/types';
+import { FileText, Upload, Download, ArrowLeft, Loader2 } from 'lucide-react';
+import type { ApiError, EvaluationResponse, JobStatus } from '@/lib/types';
 import { DecisionSummary } from '@/components/results/DecisionSummary';
 import { RubricDisplay } from '@/components/results/RubricDisplay';
 import { AgentReviews } from '@/components/results/AgentReviews';
@@ -20,6 +20,8 @@ export default function EvaluatePage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [apiError, setApiError] = useState<ApiError | null>(null);
   const [results, setResults] = useState<EvaluationResponse | null>(null);
+  const [jobStatus, setJobStatus] = useState<JobStatus | null>(null);
+  const [progress, setProgress] = useState<string>('');
 
   const {
     register,
@@ -38,9 +40,11 @@ export default function EvaluatePage() {
   const onSubmit = async (data: EvaluationFormData) => {
     setIsSubmitting(true);
     setApiError(null);
+    setJobStatus('pending');
+    setProgress('Submitting evaluation request...');
 
     try {
-      // Call the Next.js API route
+      // Submit evaluation job
       const response = await fetch('/api/evaluate', {
         method: 'POST',
         headers: {
@@ -52,21 +56,85 @@ export default function EvaluatePage() {
       if (!response.ok) {
         const errorData = await response.json();
         throw {
-          message: errorData.error || 'Evaluation failed',
+          message: errorData.error || 'Evaluation submission failed',
           status: response.status,
           details: errorData,
         };
       }
 
-      const result = await response.json();
+      const submissionResult = await response.json();
+      const jobId = submissionResult.job_id;
 
-      // Store results in state to display inline
-      setResults(result);
-      setIsSubmitting(false);
+      // Start polling for job status
+      setProgress('Evaluation in progress...');
+      await pollJobStatus(jobId);
     } catch (error: any) {
       setApiError(error);
       setIsSubmitting(false);
+      setJobStatus(null);
+      setProgress('');
     }
+  };
+
+  const pollJobStatus = async (jobId: string) => {
+    const maxAttempts = 300; // 10 minutes with 2 second intervals
+    let attempts = 0;
+
+    const poll = async () => {
+      try {
+        const response = await fetch(`/api/evaluate?job_id=${jobId}`);
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch job status');
+        }
+
+        const statusData = await response.json();
+
+        // Update status and progress
+        setJobStatus(statusData.status);
+        if (statusData.progress) {
+          setProgress(statusData.progress);
+        }
+
+        // Check if completed
+        if (statusData.status === 'completed') {
+          setResults(statusData.result);
+          setIsSubmitting(false);
+          setJobStatus(null);
+          setProgress('');
+          return;
+        }
+
+        // Check if failed
+        if (statusData.status === 'failed') {
+          throw {
+            message: statusData.error || 'Evaluation failed',
+            status: 500,
+            details: statusData,
+          };
+        }
+
+        // Continue polling if still processing
+        attempts++;
+        if (attempts < maxAttempts) {
+          setTimeout(poll, 2000); // Poll every 2 seconds
+        } else {
+          throw {
+            message: 'Evaluation timeout: Maximum wait time exceeded',
+            status: 408,
+            details: { jobId },
+          };
+        }
+      } catch (error: any) {
+        setApiError(error);
+        setIsSubmitting(false);
+        setJobStatus(null);
+        setProgress('');
+      }
+    };
+
+    // Start polling
+    poll();
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -99,6 +167,8 @@ export default function EvaluatePage() {
   const handleNewEvaluation = () => {
     setResults(null);
     setApiError(null);
+    setJobStatus(null);
+    setProgress('');
   };
 
   // If results exist, show the results view
@@ -292,7 +362,7 @@ export default function EvaluatePage() {
                   </p>
                 )}
                 <p className="mt-1 text-xs text-gray-500">
-                  Minimum 100 characters, maximum 20,000 characters
+                  Paste the candidate's complete resume
                 </p>
               </div>
 
@@ -322,20 +392,37 @@ export default function EvaluatePage() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <p className="text-sm text-gray-600">
-                  {isSubmitting
-                    ? 'Evaluation in progress... This may take 1-2 minutes.'
-                    : 'Ready to submit? Click the button to start the evaluation.'}
-                </p>
-                <Button
-                  type="submit"
-                  size="lg"
-                  loading={isSubmitting}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Evaluating...' : 'Start Evaluation'}
-                </Button>
+              <div className="pt-4 border-t border-gray-200">
+                {isSubmitting && progress && (
+                  <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="flex items-center gap-3">
+                      <Loader2 className="h-5 w-5 text-blue-600 animate-spin" />
+                      <div className="flex-1">
+                        <p className="text-sm font-medium text-blue-900">
+                          {jobStatus === 'pending' && 'Queued for processing...'}
+                          {jobStatus === 'processing' && 'Processing evaluation...'}
+                        </p>
+                        <p className="text-xs text-blue-700 mt-1">{progress}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-gray-600">
+                    {isSubmitting
+                      ? 'Evaluation in progress... This may take several minutes.'
+                      : 'Ready to submit? Click the button to start the evaluation.'}
+                  </p>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    loading={isSubmitting}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Evaluating...' : 'Start Evaluation'}
+                  </Button>
+                </div>
               </div>
             </form>
           </CardContent>
