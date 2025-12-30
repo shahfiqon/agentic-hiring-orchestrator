@@ -1,0 +1,57 @@
+Senior Backend Engineer - Platform & Infrastructure
+
+Company: CloudScale Technologies
+
+About the Role:
+We are looking for an experienced Senior Backend Engineer to join our platform team. You will design and build scalable backend systems, APIs, and data pipelines that power our SaaS products serving millions of users. This role requires strong system design skills, deep Python/FastAPI expertise, and the ability to build reliable, high-performance distributed systems.
+
+Key Responsibilities:
+- Design and implement RESTful APIs and GraphQL endpoints using FastAPI and Python
+- Build scalable microservices architecture with proper service discovery and orchestration
+- Develop data processing pipelines for high-volume transaction processing
+- Implement authentication, authorization, and security best practices
+- Design database schemas and optimize query performance for PostgreSQL and MongoDB
+- Build caching layers using Redis and implement distributed caching strategies
+- Develop event-driven architectures using message queues (RabbitMQ, Kafka)
+- Write comprehensive unit tests, integration tests, and API documentation
+- Participate in code reviews and mentor junior engineers
+- Troubleshoot production issues and implement monitoring/alerting solutions
+
+Required Qualifications:
+- 5+ years of backend engineering experience
+- Expert-level Python programming with strong understanding of async/await patterns
+- Production experience with FastAPI, Flask, or Django
+- Deep knowledge of relational databases (PostgreSQL, MySQL) and query optimization
+- Experience designing and implementing RESTful APIs at scale
+- Strong understanding of distributed systems concepts and microservices architecture
+- Proficiency with Docker, container orchestration, and CI/CD pipelines
+- Experience with cloud platforms (AWS, GCP, or Azure)
+- Solid understanding of system design, scalability, and performance optimization
+- Strong debugging and troubleshooting skills
+
+Nice to Have:
+- Experience with GraphQL and modern API design patterns
+- Knowledge of message queues and event-driven architectures
+- Familiarity with NoSQL databases (MongoDB, DynamoDB)
+- Experience with Kubernetes and infrastructure as code (Terraform)
+- Background in data engineering or ETL pipeline development
+- Contributions to open-source Python projects
+- Experience with observability tools (Prometheus, Grafana, DataDog)
+- Knowledge of security best practices and compliance standards
+
+Technical Stack:
+- Python 3.10+, FastAPI, Pydantic, SQLAlchemy
+- PostgreSQL, Redis, MongoDB
+- Docker, Kubernetes, AWS
+- RabbitMQ or Kafka
+- GitHub Actions, Jenkins
+- Monitoring: Prometheus, Grafana
+
+What We Offer:
+- Competitive salary and benefits
+- Remote-friendly work environment
+- Opportunities to work on challenging technical problems
+- Collaborative engineering culture
+- Professional development and learning budget
+
+We value engineers who can balance pragmatism with technical excellence, communicate effectively across teams, and take ownership of their work from design through deployment.

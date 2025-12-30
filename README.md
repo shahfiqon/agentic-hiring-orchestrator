@@ -71,34 +71,70 @@ The `frontend/` directory is reserved for a future web interface. The current MV
 
 ## Architecture
 
+The system uses a multi-stage LangGraph workflow with parallel agent execution and structured state management.
+
+### Workflow Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Orchestrator
+    participant HR as HR Agent
+    participant Tech as Tech Agent
+    participant Compliance as Compliance Agent
+    participant Synthesis
+
+    User->>Orchestrator: Job Description + Resume
+    Orchestrator->>Orchestrator: Generate Rubric
+
+    par Parallel Agent Execution
+        Orchestrator->>HR: Pass 1: Extract Working Memory
+        HR->>HR: Identify observations, gaps, cross-refs
+        HR->>HR: Pass 2: Evaluate with Memory Context
+        HR->>Synthesis: AgentReview + WorkingMemory
+
+        Orchestrator->>Tech: Pass 1: Extract Working Memory
+        Tech->>Tech: Identify observations, gaps, cross-refs
+        Tech->>Tech: Pass 2: Evaluate with Memory Context
+        Tech->>Synthesis: AgentReview + WorkingMemory
+
+        Orchestrator->>Compliance: Pass 1: Extract Working Memory
+        Compliance->>Compliance: Identify observations, gaps, cross-refs
+        Compliance->>Compliance: Pass 2: Evaluate with Memory Context
+        Compliance->>Synthesis: AgentReview + WorkingMemory
+    end
+
+    Synthesis->>Synthesis: Detect Disagreements
+    Synthesis->>Synthesis: Create Decision Packet
+    Synthesis->>Synthesis: Generate Interview Plan
+    Synthesis->>User: Decision Packet + Interview Plan
 ```
-┌─────────────────────────────────────────────────┐
-│              Job Description Input              │
-└──────────────────┬──────────────────────────────┘
-                   │
-                   ▼
-          ┌─────────────────┐
-          │  Orchestrator   │  Generate structured rubric
-          └────────┬────────┘
-                   │
-                   ▼
-    ┌──────────────────────────────────┐
-    │       Panel Agents (Parallel)     │
-    │  ┌──────┐ ┌──────┐ ┌──────────┐ │
-    │  │  HR  │ │ Tech │ │Compliance│ │  Two-pass evaluation
-    │  └──────┘ └──────┘ └──────────┘ │  with working memory
-    └──────────────┬───────────────────┘
-                   │
-                   ▼
-          ┌─────────────────┐
-          │   Synthesis     │  Aggregate & detect disagreements
-          └────────┬────────┘
-                   │
-                   ▼
-       ┌───────────────────────┐
-       │   Decision Packet     │  Scores, reviews, interview plan
-       └───────────────────────┘
-```
+
+### Two-Pass Evaluation Pattern
+
+Each panel agent uses a two-pass evaluation approach to reduce hallucinations and improve accuracy:
+
+**Pass 1: Working Memory Extraction**
+- Agent scans the resume and extracts structured observations
+- Records key strengths, risks, gaps, and ambiguities
+- Creates cross-references between resume sections
+- Documents timeline patterns and missing information
+
+**Pass 2: Context-Aware Evaluation**
+- Agent uses working memory to perform rubric-based scoring
+- All scores must cite specific evidence from Pass 1 observations
+- Reduces hasty judgments by grounding evaluations in documented context
+- Enables better disagreement resolution with evidence trails
+
+This pattern is detailed in `docs/004-memory-integration.md`.
+
+### State Management
+
+LangGraph manages state transitions with reducers for:
+- `panel_reviews`: Appends agent reviews (list reducer)
+- `agent_working_memory`: Merges working memory by agent role (dict reducer)
+- `disagreements`: Collected during synthesis
+- `metadata`: Tracks workflow execution timestamps and node order
 
 ## Use Cases
 
@@ -115,22 +151,55 @@ The `frontend/` directory is reserved for a future web interface. The current MV
 - **FastAPI**: RESTful API endpoints
 - **PDM**: Modern Python package management
 
+## Testing
+
+The project includes a comprehensive test suite with 80%+ code coverage.
+
+**Run All Tests:**
+```bash
+cd backend
+pdm run pytest
+```
+
+**Run with Coverage Report:**
+```bash
+pdm run pytest --cov=src --cov-report=html --cov-report=term
+```
+
+**Run Specific Test Categories:**
+```bash
+# Unit tests for models
+pdm run pytest tests/test_models/
+
+# Unit tests for nodes
+pdm run pytest tests/test_nodes/
+
+# Integration tests
+pdm run pytest tests/test_graph/
+```
+
+See [backend/tests/README.md](backend/tests/README.md) for detailed testing documentation.
+
 ## Documentation
 
 - [Backend README](backend/README.md) - Backend setup, architecture, and API documentation
+- [Testing Guide](backend/tests/README.md) - Test structure, fixtures, and writing new tests
 - [Prompts Directory](prompts/) - Prompt templates and examples
 - Environment Configuration - See `backend/.env.example`
 
 ## Development Status
 
-**Current Phase**: MVP Foundation Setup
+**Current Phase**: MVP Complete with Testing Suite
 - [x] Project structure and configuration
-- [ ] Core data models (Rubric, Review, Packet, Memory)
-- [ ] LangGraph workflow implementation
-- [ ] Panel agent nodes (HR, Tech, Compliance)
-- [ ] Synthesis and disagreement detection
-- [ ] API endpoints
-- [ ] Integration tests
+- [x] Core data models (Rubric, Review, Packet, Memory, Interview)
+- [x] LangGraph workflow implementation with state management
+- [x] Panel agent nodes (HR, Tech, Compliance) with two-pass evaluation
+- [x] Synthesis node with disagreement detection and interview planning
+- [x] Comprehensive test suite (unit + integration tests)
+- [x] Example scripts with sample data
+- [ ] API endpoints (FastAPI)
+- [ ] Production deployment configuration
+- [ ] Web-based frontend interface
 
 ## Contributing
 

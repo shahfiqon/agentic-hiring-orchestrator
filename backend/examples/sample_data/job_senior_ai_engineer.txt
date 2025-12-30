@@ -1,0 +1,55 @@
+Senior AI Engineer - Agentic Systems & Multi-Agent Orchestration
+
+Company: TechFlow AI
+
+About the Role:
+We are seeking an exceptional Senior AI Engineer to join our platform team, focusing on building production-grade agentic systems and multi-agent orchestration frameworks. You will be responsible for designing, implementing, and scaling autonomous agent systems that leverage large language models to solve complex business problems.
+
+Key Responsibilities:
+- Design and implement multi-agent systems using frameworks like LangGraph, AutoGen, or CrewAI
+- Build production-ready agentic workflows with proper error handling, state management, and observability
+- Architect agent orchestration patterns including hierarchical, sequential, and parallel coordination strategies
+- Integrate LLM APIs (OpenAI, Anthropic, etc.) into production systems with proper cost optimization and latency management
+- Develop custom tools and function calling interfaces for agent capabilities
+- Implement advanced prompting techniques including chain-of-thought, ReAct, and self-reflection patterns
+- Build evaluation frameworks and monitoring systems for agentic behavior
+- Collaborate with product teams to identify opportunities for autonomous agent deployment
+- Mentor junior engineers on LLM integration and agent design patterns
+
+Required Qualifications:
+- 5+ years of software engineering experience with strong Python proficiency
+- 2+ years of hands-on experience building production LLM-powered applications
+- Deep understanding of agentic frameworks (LangGraph, LangChain, AutoGen, or similar)
+- Proven track record of deploying multi-agent systems to production at scale
+- Strong knowledge of prompt engineering, RAG patterns, and LLM optimization techniques
+- Experience with distributed systems, async programming, and state management
+- Familiarity with vector databases (Pinecone, Weaviate, Chroma) and semantic search
+- Strong understanding of LLM APIs, token optimization, and cost management strategies
+- Experience with observability tools for LLM applications (LangSmith, Weights & Biases, etc.)
+- Excellent problem-solving skills and ability to debug complex agent behaviors
+
+Nice to Have:
+- Experience with agent evaluation frameworks and automated testing for LLM systems
+- Knowledge of fine-tuning techniques and model customization
+- Background in reinforcement learning or autonomous systems
+- Contributions to open-source LLM/agent projects
+- Experience with streaming responses and real-time agent interactions
+- Understanding of AI safety, alignment, and responsible AI practices
+- Experience with function calling, tool use, and external API integration patterns
+- Knowledge of graph-based workflow orchestration and state machines
+
+Technical Environment:
+- Python 3.11+, FastAPI, Pydantic
+- LangGraph, LangChain, OpenAI/Anthropic SDKs
+- PostgreSQL, Redis, Vector databases
+- Docker, Kubernetes, AWS/GCP
+- GitHub Actions, monitoring and observability tools
+
+What We Offer:
+- Competitive compensation with equity
+- Work on cutting-edge AI agent technology
+- Collaborative team environment with top-tier engineers
+- Flexible remote work options
+- Professional development budget for conferences and courses
+
+This role requires deep technical expertise in agentic AI systems and the ability to translate research concepts into production-ready implementations. You should be comfortable with ambiguity, rapid iteration, and the evolving landscape of LLM capabilities.

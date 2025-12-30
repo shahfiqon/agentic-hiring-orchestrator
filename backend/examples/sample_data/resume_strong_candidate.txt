@@ -1,0 +1,86 @@
+ALEX CHEN
+Senior AI Engineer
+San Francisco, CA | alex.chen@email.com | github.com/alexchen | linkedin.com/in/alexchen
+
+SUMMARY
+Accomplished Senior AI Engineer with 6+ years of experience building production-grade agentic systems and multi-agent orchestration frameworks. Deep expertise in LangGraph, LangChain, and LLM integration with proven track record of deploying autonomous agent systems at scale. Passionate about translating cutting-edge AI research into reliable production implementations.
+
+PROFESSIONAL EXPERIENCE
+
+Senior AI Engineer | Autonomous Systems Team
+VectorAI Inc. | San Francisco, CA | Jan 2022 - Present
+
+- Architected and deployed multi-agent customer support system using LangGraph, processing 50K+ conversations/month with 85% resolution rate without human intervention
+- Built hierarchical agent orchestration framework supporting 12 specialized agents (routing, analysis, action, verification) with state management and error recovery
+- Implemented advanced prompting patterns including ReAct, chain-of-thought, and self-reflection, improving task completion rates by 40%
+- Designed custom tool-calling interfaces integrating 15+ external APIs (Stripe, Zendesk, Salesforce) with proper retry logic and fallback strategies
+- Reduced LLM API costs by 60% through prompt optimization, caching strategies, and intelligent model routing (GPT-4 vs GPT-3.5 vs Claude)
+- Developed comprehensive evaluation framework using LangSmith, tracking agent behavior across 200+ test scenarios with automated regression testing
+- Built real-time monitoring dashboard for agent performance metrics, token usage, latency, and error rates using Prometheus and Grafana
+- Mentored 3 junior engineers on LLM integration patterns and agent system design
+
+AI Engineer | Research Engineering Team
+DataFlow Labs | Palo Alto, CA | Jun 2020 - Dec 2021
+
+- Implemented production RAG (Retrieval Augmented Generation) pipeline using Pinecone vector database, serving 10K+ queries/day with <500ms p95 latency
+- Built LangChain-based document processing system with semantic chunking, embedding generation (OpenAI ada-002), and hybrid search
+- Developed streaming response infrastructure for real-time LLM outputs using Server-Sent Events, improving user experience for long-form generation
+- Created prompt template library with 50+ optimized templates for various use cases, reducing prompt engineering time by 70%
+- Implemented function calling patterns for structured data extraction from unstructured text, achieving 92% accuracy on internal benchmarks
+- Integrated multiple LLM providers (OpenAI, Anthropic, Cohere) with unified interface and automatic failover mechanisms
+- Built A/B testing framework for prompt variations, tracking conversion and quality metrics across different formulations
+
+Machine Learning Engineer
+TechNova Systems | Boston, MA | Aug 2018 - May 2020
+
+- Developed Python-based ML pipelines using scikit-learn, pandas, and FastAPI for real-time prediction serving
+- Built REST APIs handling 100K+ requests/day with Redis caching and PostgreSQL persistence
+- Implemented data preprocessing pipelines processing 5TB+ of structured and unstructured data monthly
+- Created monitoring and alerting system for model performance degradation using custom metrics
+- Worked with distributed training systems using Ray for large-scale model experiments
+- Collaborated with product team to deploy 8+ ML models to production with continuous monitoring
+
+TECHNICAL SKILLS
+
+AI/Agent Frameworks: LangGraph (advanced), LangChain, AutoGen, CrewAI, Haystack
+LLM Integration: OpenAI API (GPT-4, GPT-3.5), Anthropic Claude, function calling, streaming, embeddings
+Prompting: Chain-of-thought, ReAct, self-reflection, few-shot learning, prompt optimization
+Vector Databases: Pinecone, Weaviate, Chroma, FAISS
+Python: FastAPI, Pydantic, asyncio, typing, pytest, advanced OOP patterns
+Databases: PostgreSQL, Redis, MongoDB, SQLAlchemy
+Orchestration: State machines, graph-based workflows, parallel agent coordination
+Cloud & DevOps: AWS (Lambda, ECS, S3), Docker, Kubernetes, CI/CD (GitHub Actions)
+Observability: LangSmith, Weights & Biases, Prometheus, Grafana, structured logging
+Tools: Git, pytest, black, mypy, pre-commit hooks
+
+EDUCATION
+
+Master of Science in Computer Science
+Stanford University | 2016 - 2018
+Focus: Artificial Intelligence, Natural Language Processing
+Thesis: "Multi-Agent Reinforcement Learning for Cooperative Task Solving"
+
+Bachelor of Science in Computer Science
+UC Berkeley | 2012 - 2016
+GPA: 3.8/4.0
+
+OPEN SOURCE & PROJECTS
+
+- Contributor to LangChain (20+ merged PRs) - added streaming support and custom tool interfaces
+- Created "agent-eval" open-source library for agentic system evaluation (500+ GitHub stars)
+- Published blog posts on agent orchestration patterns with 50K+ total views
+- Speaker at AI Engineer Summit 2023: "Production Patterns for Multi-Agent Systems"
+
+CERTIFICATIONS & AWARDS
+
+- AWS Certified Solutions Architect - Professional
+- Best Engineering Innovation Award, VectorAI Inc. (2023)
+- Kaggle Competition: Top 5% in NLP challenges
+
+ADDITIONAL CONTEXT
+
+Strong believer in systematic evaluation and testing for LLM systems. Experienced with building retry logic, error handling, and graceful degradation for unpredictable LLM behaviors. Comfortable working in ambiguous problem spaces and rapidly iterating based on user feedback. Enjoy staying current with latest research (regularly read arXiv papers on agents, RAG, and prompting techniques).
+
+Some areas I'm actively learning: reinforcement learning from human feedback (RLHF), fine-tuning techniques for specialized domains, and advanced RAG patterns like HyDE and query decomposition. Less hands-on experience with model training infrastructure and distributed training at very large scale (billions of parameters), though familiar with concepts.
+
+Available for remote work, open to occasional travel for team collaboration or conferences.

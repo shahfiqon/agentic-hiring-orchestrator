@@ -7,7 +7,6 @@ and validation.
 
 from .llm import get_structured_llm
 from .prompt_helpers import (
-    format_resume_for_prompt,
     format_rubric_for_prompt,
 )
 from .validators import (
@@ -19,7 +18,6 @@ from .validators import (
 
 __all__ = [
     "get_structured_llm",
-    "format_resume_for_prompt",
     "format_rubric_for_prompt",
     "validate_rubric_completeness",
     "validate_rubric_quality",

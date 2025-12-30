@@ -1,0 +1,92 @@
+JORDAN MARTINEZ
+AI/ML Engineer
+Seattle, WA | jordan.martinez@email.com | github.com/jmartinez
+
+PROFESSIONAL SUMMARY
+AI/ML Engineer with 3.5 years of experience in machine learning and NLP applications. Background in building chatbots, recommendation systems, and working with large language models. Passionate about AI and eager to expand expertise in agentic systems and multi-agent frameworks.
+
+WORK EXPERIENCE
+
+AI/ML Engineer
+SmartChat Solutions | Seattle, WA | March 2022 - Present
+
+- Developed chatbot application using OpenAI API for customer service automation
+- Integrated GPT-3.5 into existing product, handling conversation history and context management
+- Built simple agent workflows for task routing and information retrieval
+- Worked with LangChain for basic RAG implementation using company knowledge base
+- Implemented prompt templates for different conversation scenarios
+- Created API endpoints using Flask for chatbot integration
+- Optimized token usage to reduce costs by implementing conversation summarization
+- Collaborated with frontend team on chat interface and user experience
+
+Software Engineer - ML Focus
+TechStartup Inc. | Portland, OR | June 2021 - February 2022
+
+- Built recommendation engine using collaborative filtering and content-based approaches
+- Developed Python scripts for data processing and feature engineering
+- Worked with ML models (scikit-learn, basic neural networks with TensorFlow)
+- Created REST APIs using Flask for model serving
+- Implemented caching with Redis to improve response times
+- Wrote unit tests and participated in code reviews
+- Deployed models to AWS EC2 instances
+
+Junior Software Engineer
+DevShop Co. | Remote | August 2020 - May 2021
+
+- Developed backend features using Python and Django
+- Worked with PostgreSQL databases and wrote SQL queries
+- Built CRUD APIs for web applications
+- Participated in agile development process and sprint planning
+- Fixed bugs and improved code quality based on peer feedback
+
+TECHNICAL SKILLS
+
+Programming: Python (proficient), JavaScript (familiar), SQL
+ML/AI: OpenAI API, LangChain (basic), scikit-learn, TensorFlow (basics), pandas, numpy
+Web Frameworks: Flask, Django, FastAPI (learning)
+Databases: PostgreSQL, Redis, basic MongoDB
+Cloud: AWS (EC2, S3), some Docker experience
+Tools: Git, Jupyter notebooks, VS Code, Postman
+Concepts: REST APIs, basic system design, prompt engineering, RAG basics
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+University of Washington | 2016 - 2020
+GPA: 3.4/4.0
+Relevant coursework: Machine Learning, Algorithms, Databases, Software Engineering
+
+PROJECTS & LEARNING
+
+Personal Projects:
+- Built a personal assistant chatbot using OpenAI API with memory and conversation context
+- Experimented with LangChain for document Q&A using PDF files
+- Created simple multi-step workflow for web scraping and summarization
+- Built Chrome extension that summarizes articles using GPT API
+
+Online Learning:
+- Completed "LangChain for LLM Application Development" course on Deeplearning.AI
+- Working through fast.ai courses on deep learning
+- Regular reader of AI engineering blogs and newsletters
+- Experimenting with new LLM models and techniques
+
+ADDITIONAL INFORMATION
+
+I'm really excited about the potential of autonomous agents and multi-agent systems. While most of my experience has been with simpler chatbot implementations and basic LLM integrations, I've been actively learning about more advanced agent frameworks like LangGraph and AutoGen through personal projects and online courses.
+
+My experience with production systems is primarily at smaller scale - handling thousands of requests rather than millions. I'm comfortable with the fundamentals of API development, database design, and cloud deployment, but less experienced with complex distributed systems or advanced orchestration patterns.
+
+I work best when I have clear requirements and can iterate based on feedback. I'm a quick learner and not afraid to dive into documentation or ask questions when facing unfamiliar challenges. I stay current with AI developments by following research papers and experimenting with new tools.
+
+Areas I'm actively working to improve:
+- Deeper understanding of LangGraph and complex agent orchestration
+- More experience with vector databases and advanced RAG techniques
+- Building larger-scale systems with proper monitoring and observability
+- Advanced prompt engineering and evaluation frameworks
+- System design for high-traffic applications
+
+I have some experience with async Python but haven't built extensively asynchronous systems. My understanding of streaming LLM responses is mostly theoretical from tutorials. I've used function calling in toy projects but haven't implemented it in production at scale.
+
+Looking for opportunities to work with experienced engineers who can mentor me in building production-grade agentic systems. Comfortable with remote work and flexible on travel for team meetings or training.
+
+References available upon request.
