@@ -11,12 +11,12 @@ This node:
 import logging
 from typing import Dict, List
 
-from backend.src.state import HiringWorkflowState
-from backend.src.models.packet import Disagreement, DecisionPacket
-from backend.src.models.interview import InterviewPlan, InterviewQuestion
-from backend.src.models.memory import WorkingMemory
-from backend.src.models.review import AgentReview
-from backend.src.models.rubric import Rubric
+from src.state import HiringWorkflowState
+from src.models.packet import Disagreement, DecisionPacket
+from src.models.interview import InterviewPlan, InterviewQuestion
+from src.models.memory import WorkingMemory
+from src.models.review import AgentReview
+from src.models.rubric import Rubric
 
 logger = logging.getLogger(__name__)
 

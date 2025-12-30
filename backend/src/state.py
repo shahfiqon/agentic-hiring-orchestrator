@@ -83,11 +83,11 @@ state.update({
 
 from typing import Any, Dict, List, Optional, TypedDict
 
-from backend.src.models.interview import InterviewPlan
-from backend.src.models.memory import WorkingMemory
-from backend.src.models.packet import DecisionPacket, Disagreement
-from backend.src.models.review import AgentReview
-from backend.src.models.rubric import Rubric
+from src.models.interview import InterviewPlan
+from src.models.memory import WorkingMemory
+from src.models.packet import DecisionPacket, Disagreement
+from src.models.review import AgentReview
+from src.models.rubric import Rubric
 
 
 class HiringWorkflowState(TypedDict, total=False):

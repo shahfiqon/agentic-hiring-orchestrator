@@ -8,11 +8,11 @@ This module implements the HR agent's two-pass evaluation workflow:
 import logging
 from typing import Dict
 
-from backend.src.state import HiringWorkflowState
-from backend.src.models.memory import WorkingMemory
-from backend.src.models.review import AgentReview
-from backend.src.utils.llm import get_structured_llm
-from backend.src.prompts.agent_prompts import (
+from src.state import HiringWorkflowState
+from src.models.memory import WorkingMemory
+from src.models.review import AgentReview
+from src.utils.llm import get_structured_llm
+from src.prompts.agent_prompts import (
     WORKING_MEMORY_EXTRACTION_PROMPT,
     HR_EVALUATION_PROMPT,
 )

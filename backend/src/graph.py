@@ -23,7 +23,7 @@ The workflow uses LangGraph's reducer system for proper state merging:
 ## Usage Example
 
 ```python
-from backend.src.graph import run_hiring_workflow
+from src.graph import run_hiring_workflow
 
 result = run_hiring_workflow(
     job_description="Senior Python Engineer with FastAPI experience",
@@ -48,10 +48,11 @@ from typing import Dict, List, Optional, TypedDict, Annotated, Any
 from datetime import datetime
 import time
 
-from langgraph.graph import StateGraph, END, Send
+from langgraph.graph import StateGraph, END
+from langgraph.constants import Send
 
 # Import node functions
-from backend.src.nodes import (
+from src.nodes import (
     orchestrator_node,
     hr_agent_node,
     tech_agent_node,
@@ -60,19 +61,18 @@ from backend.src.nodes import (
 )
 
 # Import state and models
-from backend.src.state import HiringWorkflowState, validate_panel_memory_consistency
-from backend.src.models import (
+from src.state import HiringWorkflowState, validate_panel_memory_consistency
+from src.models import (
     AgentReview,
     WorkingMemory,
     Rubric,
     Disagreement,
     DecisionPacket,
     InterviewPlan,
-    WorkflowMetadata,
 )
 
 # Import config
-from backend.src.config import get_settings
+from src.config import get_settings
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -155,7 +155,7 @@ class AnnotatedHiringWorkflowState(TypedDict):
     interview_plan: Optional[InterviewPlan]
 
     # Metadata (simple replacement)
-    workflow_metadata: Optional[WorkflowMetadata]
+    workflow_metadata: Optional[Dict[str, Any]]
 
 
 # ============================================================================
@@ -410,11 +410,11 @@ def run_hiring_workflow(
             "disagreements": None,
             "decision_packet": None,
             "interview_plan": None,
-            "workflow_metadata": WorkflowMetadata(
-                execution_start=datetime.utcnow().isoformat(),
-                execution_end=None,
-                node_execution_order=[]
-            )
+            "workflow_metadata": {
+                "execution_start": datetime.utcnow().isoformat(),
+                "execution_end": None,
+                "node_execution_order": []
+            }
         }
 
         # Invoke the compiled graph
