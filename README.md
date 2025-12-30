@@ -61,6 +61,10 @@ pdm run pipeline
    - Set `LLM_PROVIDER=openai` in `.env`
    - Provide `OPENAI_API_KEY`
 
+3. **Anthropic Claude**: Use Anthropic's Claude API
+   - Set `LLM_PROVIDER=anthropic` in `.env`
+   - Provide `ANTHROPIC_API_KEY`
+
 ### Prompts Directory
 
 The `prompts/` directory contains shared prompt templates and few-shot examples used across the system. These prompts are versioned separately to enable rapid iteration and A/B testing.

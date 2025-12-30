@@ -28,24 +28,31 @@ def format_rubric_summary(rubric: Rubric) -> str:
     lines.append("📊 Categories:")
     for category in rubric.categories:
         weight_pct = int(category.weight * 100)
-        lines.append(f"  • {category.name} (Weight: {weight_pct}%)")
+        must_have = " [MUST-HAVE]" if category.is_must_have else ""
+        lines.append(f"  • {category.name} (Weight: {weight_pct}%){must_have}")
         lines.append(f"    {category.description}")
-        if category.key_indicators:
-            lines.append(f"    Key indicators: {', '.join(category.key_indicators[:3])}")
+        
+        # Extract indicators from highest score level
+        if category.scoring_criteria:
+            highest_score = max(category.scoring_criteria, key=lambda x: x.score_value)
+            if highest_score.indicators:
+                indicators_preview = ', '.join(highest_score.indicators[:3])
+                lines.append(f"    Key indicators (score {highest_score.score_value}): {indicators_preview}")
         lines.append("")
 
-    # Must-haves
-    if rubric.must_haves:
-        lines.append("🎯 Must-Have Requirements:")
-        for mh in rubric.must_haves:
-            lines.append(f"  • {mh.requirement}")
-            lines.append(f"    Why critical: {mh.why_critical}")
+    # Must-haves (categories marked as must-have)
+    must_have_categories = [c for c in rubric.categories if c.is_must_have]
+    if must_have_categories:
+        lines.append("🎯 Must-Have Categories:")
+        for category in must_have_categories:
+            lines.append(f"  • {category.name}")
+            lines.append(f"    {category.description}")
         lines.append("")
 
-    # Scoring scale
+    # Scoring scale (implicit 0-5 scale from ScoringCriteria)
     lines.append("📈 Scoring Scale:")
-    lines.append(f"  • Range: {rubric.scoring_scale.min_score} - {rubric.scoring_scale.max_score}")
-    lines.append(f"  • Pass threshold: {rubric.scoring_scale.pass_threshold}")
+    lines.append(f"  • Range: 0 - 5")
+    lines.append(f"  • 0 = No evidence, 3 = Solid/Adequate, 5 = Exceptional")
     lines.append("")
 
     return "\n".join(lines)
@@ -65,10 +72,12 @@ def format_agent_review(review: AgentReview, show_details: bool = True) -> str:
     lines.append("📊 Category Scores:")
     for cat_score in review.category_scores:
         score_bar = "█" * int(cat_score.score) + "░" * (5 - int(cat_score.score))
-        lines.append(f"  • {cat_score.category_name}: {cat_score.score:.1f}/5.0 [{score_bar}]")
+        confidence_indicator = f"[{cat_score.confidence}]"
+        lines.append(f"  • {cat_score.category_name}: {cat_score.score}/5.0 [{score_bar}] {confidence_indicator}")
         if show_details and cat_score.evidence:
             for evidence in cat_score.evidence[:2]:  # Show first 2 evidence items
-                evidence_short = evidence[:80] + "..." if len(evidence) > 80 else evidence
+                evidence_text = evidence.resume_text
+                evidence_short = evidence_text[:80] + "..." if len(evidence_text) > 80 else evidence_text
                 lines.append(f"    - {evidence_short}")
     lines.append("")
 

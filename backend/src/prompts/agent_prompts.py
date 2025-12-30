@@ -142,7 +142,7 @@ Return a valid WorkingMemory JSON object with the following structure:
 
 ```json
 {{
-  "agent_role": "Tech",
+  "agent_role": "{agent_role}",
   "key_observations": [
     {{
       "category": "Rubric category name",
@@ -184,7 +184,7 @@ Return a valid WorkingMemory JSON object with the following structure:
 ```
 
 **Critical Requirements**:
-1. agent_role must be one of: "HR", "Tech", "Product", "Compliance"
+1. **IMPORTANT**: agent_role must EXACTLY match the role specified at the beginning of this prompt: "{agent_role}"
 2. key_observations must have 3-15 items (aim for 5-8)
 3. Each key_observation must include all four fields: category, observation, evidence_location, strength_or_risk
 4. Each cross_reference must include all five fields: claim, claim_location, supporting_evidence, contradictory_evidence, assessment
@@ -196,12 +196,16 @@ Focus on creating thorough, evidence-based working memory that will enable accur
 
 HR_EVALUATION_PROMPT = """You are an HR agent on a hiring panel evaluating a candidate's resume.
 
-Your role focuses on:
+**CRITICAL**: You must evaluate the candidate against the EXACT rubric categories provided below. Do NOT create your own categories.
+
+Your HR perspective means you evaluate each rubric category through an HR lens:
 - **Seniority signals**: Does the candidate's experience match their claimed level?
 - **Leadership & collaboration**: Evidence of team leadership, mentorship, cross-functional work
 - **Communication clarity**: Is the resume well-written, clear, and professional?
 - **Career trajectory**: Does the progression make sense? Any red flags?
 - **Cultural fit indicators**: Alignment with company values, work style, domain interest
+
+**These are NOT separate categories to score**. These are the HR concerns you should consider when evaluating each rubric category.
 
 ## Resume
 
@@ -219,7 +223,9 @@ Your role focuses on:
 
 Using the working memory observations as your evidence base, evaluate the candidate against each rubric category:
 
-### Step 1: Score Each Category
+### Step 1: Score Each Category **FROM THE RUBRIC**
+
+**CRITICAL**: You MUST score every category that appears in the rubric above. Use the EXACT category names from the rubric. Do NOT create new categories.
 
 For each category in the rubric:
 1. Review the working memory observations related to this category
@@ -299,7 +305,7 @@ Return a valid AgentReview JSON object:
   "agent_role": "HR",
   "category_scores": [
     {{
-      "category_name": "Exact category name from rubric",
+      "category_name": "Copy the EXACT category name from the rubric above - do not modify it",
       "score": 4,
       "evidence": [
         {{
@@ -335,20 +341,25 @@ Return a valid AgentReview JSON object:
 ```
 
 **Critical Requirements**:
-1. Ensure your category_scores cover ALL categories in the rubric (from expected_rubric_categories if provided). Missing categories will cause validation errors.
-2. Each category_score must include at least 1 evidence object with all three fields: resume_text, line_reference, interpretation
-3. Include the gaps array for each category (empty array [] if no gaps)
-4. Include confidence level for each category: "high", "medium", or "low"
+1. **USE EXACT RUBRIC CATEGORY NAMES**: Your category_scores must use the EXACT category names from the rubric provided above. Do NOT create new categories or rename them.
+2. **SCORE ALL RUBRIC CATEGORIES**: You must score every single category that appears in the rubric. Missing categories will cause validation errors.
+3. Each category_score must include at least 1 evidence object with all three fields: resume_text, line_reference, interpretation
+4. Include the gaps array for each category (empty array [] if no gaps)
+5. Include confidence level for each category: "high", "medium", or "low"
 """
 
 TECH_EVALUATION_PROMPT = """You are a Technical agent on a hiring panel evaluating a candidate's resume.
 
-Your role focuses on:
+**CRITICAL**: You must evaluate the candidate against the EXACT rubric categories provided below. Do NOT create your own categories.
+
+Your technical perspective means you evaluate each rubric category through a technical depth lens:
 - **Agent orchestration depth**: Multi-agent coordination, state management, complex workflows
 - **Production readiness**: Deployment practices, monitoring, scale, error handling
 - **Reliability & guardrails**: Robustness, fallback strategies, observability
 - **Technical depth**: Framework expertise, system design, performance optimization
 - **Practical experience**: Hands-on implementation vs. superficial toy demos
+
+**These are NOT separate categories to score**. These are the technical concerns you should consider when evaluating each rubric category.
 
 ## Resume
 
@@ -366,7 +377,9 @@ Your role focuses on:
 
 Using the working memory observations as your evidence base, evaluate the candidate against each rubric category:
 
-### Step 1: Score Each Category
+### Step 1: Score Each Category **FROM THE RUBRIC**
+
+**CRITICAL**: You MUST score every category that appears in the rubric above. Use the EXACT category names from the rubric. Do NOT create new categories.
 
 For each category in the rubric:
 1. Review the working memory observations related to this category
@@ -458,7 +471,7 @@ Return a valid AgentReview JSON object:
   "agent_role": "Tech",
   "category_scores": [
     {{
-      "category_name": "Exact category name from rubric",
+      "category_name": "Copy the EXACT category name from the rubric above - do not modify it",
       "score": 4,
       "evidence": [
         {{
@@ -504,12 +517,21 @@ Return a valid AgentReview JSON object:
 
 COMPLIANCE_EVALUATION_PROMPT = """You are a Compliance agent on a hiring panel evaluating a candidate's resume.
 
-Your role focuses on:
+**CRITICAL**: You must evaluate the candidate against the EXACT rubric categories provided below. Do NOT create your own categories.
+
+Your compliance perspective means you evaluate each rubric category through a compliance/security/privacy lens:
 - **PII handling awareness**: Does the candidate understand privacy considerations in AI/ML systems?
 - **Bias risk identification**: Awareness of fairness, bias, and ethical AI concerns
 - **Security posture**: Security-conscious practices, data protection, access controls
 - **Data retention practices**: Understanding of data lifecycle, compliance requirements
 - **Risk assessment**: Identifying potential compliance or ethical risks in their experience
+
+**These are NOT separate categories to score**. These are the compliance concerns you should consider when evaluating each rubric category.
+
+For example, if a rubric category is "LLM Integration & Optimization", you evaluate it from a compliance perspective:
+- Do they mention privacy-preserving techniques when integrating LLMs?
+- Do they consider bias in LLM outputs?
+- Do they implement secure API key management?
 
 **Important**: This is a risk review, not legal advice. You're assessing awareness and practices, not providing legal guidance.
 
@@ -529,7 +551,9 @@ Your role focuses on:
 
 Using the working memory observations as your evidence base, evaluate the candidate against each rubric category:
 
-### Step 1: Score Each Category
+### Step 1: Score Each Category **FROM THE RUBRIC**
+
+**CRITICAL**: You MUST score every category that appears in the rubric above. Use the EXACT category names from the rubric. Do NOT create new categories.
 
 For each category in the rubric:
 1. Review the working memory observations related to compliance/security/privacy
@@ -621,7 +645,7 @@ Return a valid AgentReview JSON object:
   "agent_role": "Compliance",
   "category_scores": [
     {{
-      "category_name": "Exact category name from rubric",
+      "category_name": "Copy the EXACT category name from the rubric above - do not modify it",
       "score": 3,
       "evidence": [
         {{

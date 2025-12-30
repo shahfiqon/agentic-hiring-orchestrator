@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     # ============================================================================
     llm_provider: str = Field(
         default="llamacpp-server",
-        description="LLM provider to use: 'llamacpp-server' or 'openai'"
+        description="LLM provider to use: 'llamacpp-server', 'openai', or 'anthropic'"
     )
 
     # ============================================================================
@@ -54,7 +54,7 @@ class Settings(BaseSettings):
         description="Sampling temperature for LLM responses"
     )
     max_tokens: int = Field(
-        default=2048,
+        default=8192,
         gt=0,
         description="Maximum tokens in LLM responses"
     )
@@ -69,6 +69,18 @@ class Settings(BaseSettings):
     openai_model_name: str = Field(
         default="gpt-4o-2024-08-06",
         description="OpenAI model name with structured output support"
+    )
+
+    # ============================================================================
+    # Anthropic Configuration (alternative provider)
+    # ============================================================================
+    anthropic_api_key: Optional[str] = Field(
+        default=None,
+        description="Anthropic API key (required if llm_provider='anthropic')"
+    )
+    anthropic_model_name: str = Field(
+        default="claude-3-5-sonnet-20241022",
+        description="Anthropic model name (claude-3-5-sonnet-20241022, claude-3-opus-20240229, etc.)"
     )
 
     # ============================================================================
@@ -175,7 +187,7 @@ class Settings(BaseSettings):
     def validate_settings(self) -> 'Settings':
         """Validate cross-field constraints and provider-specific requirements."""
         # Validate LLM provider
-        valid_providers = ["llamacpp-server", "openai"]
+        valid_providers = ["llamacpp-server", "openai", "anthropic"]
         if self.llm_provider not in valid_providers:
             raise ValueError(
                 f"llm_provider must be one of {valid_providers}, "
@@ -187,6 +199,13 @@ class Settings(BaseSettings):
             if not self.openai_api_key or self.openai_api_key == "your_openai_api_key_here":
                 raise ValueError(
                     "openai_api_key must be set when llm_provider='openai'"
+                )
+
+        # Validate Anthropic configuration if selected
+        if self.llm_provider == "anthropic":
+            if not self.anthropic_api_key or self.anthropic_api_key == "your_anthropic_api_key_here":
+                raise ValueError(
+                    "anthropic_api_key must be set when llm_provider='anthropic'"
                 )
 
         # Validate llama.cpp server URL format

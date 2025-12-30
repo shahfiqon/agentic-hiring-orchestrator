@@ -51,6 +51,13 @@ LLM_PROVIDER=openai
 OPENAI_API_KEY=your_actual_api_key_here
 ```
 
+**Alternative Setup (Anthropic Claude):**
+```bash
+# In your .env file:
+LLM_PROVIDER=anthropic
+ANTHROPIC_API_KEY=your_actual_api_key_here
+```
+
 ### Running the System
 
 ```bash
@@ -157,9 +164,10 @@ The system follows a multi-agent orchestration pattern:
 
 All configuration is managed through environment variables. Key settings:
 
-- `LLM_PROVIDER`: Choose between `llamacpp-server` (default) or `openai`
+- `LLM_PROVIDER`: Choose between `llamacpp-server` (default), `openai`, or `anthropic`
 - `LLAMACPP_BASE_URL`: llama.cpp server endpoint (default: http://localhost:8080/v1)
 - `OPENAI_API_KEY`: Required only if using OpenAI provider
+- `ANTHROPIC_API_KEY`: Required only if using Anthropic provider
 - `ENABLE_WORKING_MEMORY`: Toggle two-pass evaluation (default: true)
 - `ENABLE_PRODUCT_AGENT`: Toggle product agent in panel (default: false)
 - `RUBRIC_CATEGORIES_COUNT`: Number of rubric categories (default: 5)

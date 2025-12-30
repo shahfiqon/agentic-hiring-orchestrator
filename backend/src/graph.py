@@ -366,7 +366,7 @@ hiring_workflow = create_hiring_workflow()
 # Step 7: Create Graph Execution Function
 # ============================================================================
 
-def run_hiring_workflow(
+async def run_hiring_workflow(
     job_description: str,
     resume: str,
     company_context: Optional[str] = None
@@ -417,9 +417,9 @@ def run_hiring_workflow(
             }
         }
 
-        # Invoke the compiled graph
+        # Invoke the compiled graph asynchronously
         logger.info("Invoking workflow graph")
-        result = hiring_workflow.invoke(initial_state)
+        result = await hiring_workflow.ainvoke(initial_state)
 
         # Update metadata with end time
         end_time = time.time()
@@ -429,11 +429,14 @@ def run_hiring_workflow(
             result["workflow_metadata"]["execution_end"] = datetime.utcnow().isoformat()
 
         # Log execution summary
+        decision_packet = result.get('decision_packet')
+        recommendation = decision_packet.recommendation if decision_packet else 'N/A'
+        
         logger.info(
             f"Workflow execution completed successfully. "
             f"Duration: {duration:.2f}s, "
             f"Panel reviews: {len(result.get('panel_reviews', []))}, "
-            f"Final recommendation: {result.get('decision_packet', {}).get('final_recommendation') if result.get('decision_packet') else 'N/A'}"
+            f"Final recommendation: {recommendation}"
         )
 
         return result
