@@ -24,8 +24,11 @@ agentic-hiring-orchestrator/
 │   ├── notebooks/       # Jupyter notebooks for development
 │   ├── examples/        # Example scripts and sample data
 │   └── README.md        # Backend-specific documentation
-├── prompts/             # Shared prompt templates and examples
-└── frontend/            # (Reserved for future UI implementation)
+├── frontend/            # Next.js web application
+│   ├── src/             # Frontend source code
+│   ├── public/          # Static assets
+│   └── README.md        # Frontend-specific documentation
+└── prompts/             # Shared prompt templates and examples
 ```
 
 ## Getting Started
@@ -65,13 +68,39 @@ pdm run pipeline
    - Set `LLM_PROVIDER=anthropic` in `.env`
    - Provide `ANTHROPIC_API_KEY`
 
+### Frontend Setup
+
+The frontend is a Next.js web application that provides a user-friendly interface for the evaluation system. See [frontend/README.md](frontend/README.md) for detailed setup instructions.
+
+**Quick Start:**
+
+```bash
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies
+npm install
+
+# Configure environment
+cp .env.example .env.local
+# Edit .env.local with your backend URL (default: http://localhost:8000)
+
+# Start development server
+npm run dev
+```
+
+The frontend will be available at http://localhost:3000
+
+**Features:**
+- Simple evaluation form with job description and resume input
+- Real-time backend health monitoring
+- Comprehensive results display with all evaluation data
+- Export results as JSON
+- Responsive design for mobile, tablet, and desktop
+
 ### Prompts Directory
 
 The `prompts/` directory contains shared prompt templates and few-shot examples used across the system. These prompts are versioned separately to enable rapid iteration and A/B testing.
-
-### Frontend (Future)
-
-The `frontend/` directory is reserved for a future web interface. The current MVP focuses on API-driven workflows accessible via the backend.
 
 ## Architecture
 
@@ -187,13 +216,14 @@ See [backend/tests/README.md](backend/tests/README.md) for detailed testing docu
 ## Documentation
 
 - [Backend README](backend/README.md) - Backend setup, architecture, and API documentation
+- [Frontend README](frontend/README.md) - Frontend setup, usage guide, and component documentation
 - [Testing Guide](backend/tests/README.md) - Test structure, fixtures, and writing new tests
 - [Prompts Directory](prompts/) - Prompt templates and examples
-- Environment Configuration - See `backend/.env.example`
+- Environment Configuration - See `backend/.env.example` and `frontend/.env.example`
 
 ## Development Status
 
-**Current Phase**: MVP Complete with Testing Suite
+**Current Phase**: Full-Stack Application Complete
 - [x] Project structure and configuration
 - [x] Core data models (Rubric, Review, Packet, Memory, Interview)
 - [x] LangGraph workflow implementation with state management
@@ -201,9 +231,11 @@ See [backend/tests/README.md](backend/tests/README.md) for detailed testing docu
 - [x] Synthesis node with disagreement detection and interview planning
 - [x] Comprehensive test suite (unit + integration tests)
 - [x] Example scripts with sample data
-- [ ] API endpoints (FastAPI)
+- [x] API endpoints (FastAPI)
+- [x] Web-based frontend interface (Next.js)
 - [ ] Production deployment configuration
-- [ ] Web-based frontend interface
+- [ ] Frontend testing suite
+- [ ] End-to-end integration tests
 
 ## Contributing
 

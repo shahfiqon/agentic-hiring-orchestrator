@@ -34,20 +34,24 @@ settings = get_settings()
 # Request/Response Models
 # ============================================================================
 
-class CandidateInput(BaseModel):
+class EvaluationRequest(BaseModel):
     """Input model for candidate evaluation requests."""
-    name: str = Field(..., description="Candidate's full name")
-    role: str = Field(..., description="Target role/position")
-    resume: str = Field(..., description="Resume content or summary")
-    experience_years: int = Field(..., ge=0, description="Years of experience")
-    skills: List[str] = Field(default_factory=list, description="List of skills")
+    job_description: str = Field(..., description="Job description text")
+    resume: str = Field(..., description="Candidate resume text")
+    company_context: str | None = Field(None, description="Optional company context")
 
 
 class EvaluationResponse(BaseModel):
     """Response model for evaluation results."""
-    candidate_id: str = Field(..., description="Unique candidate identifier")
-    status: str = Field(..., description="Evaluation status")
-    message: str = Field(..., description="Status message")
+    job_description: str
+    resume: str
+    company_context: str | None
+    rubric: Dict[str, Any]
+    working_memories: List[Dict[str, Any]]
+    agent_reviews: List[Dict[str, Any]]
+    decision_packet: Dict[str, Any]
+    interview_plan: Dict[str, Any]
+    metadata: Dict[str, Any] | None
 
 
 class HealthResponse(BaseModel):
@@ -124,34 +128,105 @@ async def health_check() -> HealthResponse:
     )
 
 
-@app.post("/evaluate", response_model=EvaluationResponse, status_code=status.HTTP_202_ACCEPTED)
-async def evaluate_candidate(candidate: CandidateInput) -> EvaluationResponse:
+@app.post("/evaluate", response_model=EvaluationResponse, status_code=status.HTTP_200_OK)
+async def evaluate_candidate(request: EvaluationRequest) -> EvaluationResponse:
     """Evaluate a candidate using the multi-agent system.
 
     Args:
-        candidate: Candidate information and resume
+        request: Evaluation request with job description and resume
 
     Returns:
-        EvaluationResponse with evaluation status
+        EvaluationResponse with complete workflow results
 
     Raises:
         HTTPException: If evaluation fails
     """
     try:
-        logger.info(f"Received evaluation request for: {candidate.name}")
+        logger.info(f"Received evaluation request")
+        logger.info(f"Job description length: {len(request.job_description)}")
+        logger.info(f"Resume length: {len(request.resume)}")
 
-        # TODO: Implement actual graph execution
-        # result = await run_evaluation_graph(candidate)
+        # Import here to avoid circular dependencies
+        from src.graph import run_hiring_workflow
 
-        # For now, return a placeholder response
+        # Execute the workflow
+        result = await run_hiring_workflow(
+            job_description=request.job_description,
+            resume=request.resume,
+            company_context=request.company_context
+        )
+
+        # Normalize the response to match frontend expectations
+        # Comment 3: Map panel_reviews to agent_reviews, convert agent_working_memory dict to array,
+        # and normalize recommendation/confidence casing and enums
+
+        # Convert panel_reviews to agent_reviews with normalized agent_name
+        agent_reviews = []
+        for review in result.get("panel_reviews", []):
+            review_dict = review.model_dump() if hasattr(review, 'model_dump') else review
+            # Normalize agent_role to agent_name
+            if "agent_role" in review_dict:
+                review_dict["agent_name"] = review_dict.pop("agent_role")
+            agent_reviews.append(review_dict)
+
+        # Convert agent_working_memory dict to working_memories array
+        working_memories = []
+        for agent_name, memory in result.get("agent_working_memory", {}).items():
+            memory_dict = memory.model_dump() if hasattr(memory, 'model_dump') else memory
+            # Ensure agent_name is set
+            if "agent_name" not in memory_dict:
+                memory_dict["agent_name"] = agent_name
+            working_memories.append(memory_dict)
+
+        # Normalize decision_packet fields (recommendation and confidence casing)
+        decision_packet = result.get("decision_packet")
+        if decision_packet:
+            decision_dict = decision_packet.model_dump() if hasattr(decision_packet, 'model_dump') else decision_packet
+
+            # Normalize recommendation enum values to match frontend expectations
+            # Backend: "Hire", "Lean hire", "Lean no", "No"
+            # Frontend: "hire", "lean_hire", "lean_no", "no"
+            if "recommendation" in decision_dict and decision_dict["recommendation"]:
+                rec = decision_dict["recommendation"]
+                recommendation_map = {
+                    "Hire": "hire",
+                    "Lean hire": "lean_hire",
+                    "Lean no": "lean_no",
+                    "No": "no"
+                }
+                decision_dict["recommendation"] = recommendation_map.get(rec, rec.lower().replace(" ", "_"))
+
+            # Normalize confidence to confidence_level if needed
+            if "confidence" in decision_dict and "confidence_level" not in decision_dict:
+                decision_dict["confidence_level"] = decision_dict.pop("confidence")
+        else:
+            decision_dict = {}
+
+        # Convert other Pydantic models to dicts
+        rubric = result.get("rubric")
+        rubric_dict = rubric.model_dump() if hasattr(rubric, 'model_dump') else (rubric or {})
+
+        interview_plan = result.get("interview_plan")
+        interview_plan_dict = interview_plan.model_dump() if hasattr(interview_plan, 'model_dump') else (interview_plan or {})
+
+        # Build metadata
+        metadata = result.get("workflow_metadata", {})
+
+        # Return the normalized response
         return EvaluationResponse(
-            candidate_id=f"candidate_{candidate.name.replace(' ', '_').lower()}",
-            status="accepted",
-            message=f"Evaluation queued for {candidate.name}. Graph execution to be implemented."
+            job_description=request.job_description,
+            resume=request.resume,
+            company_context=request.company_context,
+            rubric=rubric_dict,
+            working_memories=working_memories,
+            agent_reviews=agent_reviews,
+            decision_packet=decision_dict,
+            interview_plan=interview_plan_dict,
+            metadata=metadata
         )
 
     except Exception as e:
-        logger.error(f"Evaluation failed: {str(e)}")
+        logger.error(f"Evaluation failed: {str(e)}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Evaluation failed: {str(e)}"

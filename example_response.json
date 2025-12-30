@@ -1,0 +1,1248 @@
+{
+    "job_description": "Senior AI Engineer - Agentic Systems & Multi-Agent Orchestration\n\nCompany: TechFlow AI\n\nAbout the Role:\nWe are seeking an exceptional Senior AI Engineer to join our platform team, focusing on building production-grade agentic systems and multi-agent orchestration frameworks. You will be responsible for designing, implementing, and scaling autonomous agent systems that leverage large language models to solve complex business problems.\n\nKey Responsibilities:\n- Design and implement multi-agent systems using frameworks like LangGraph, AutoGen, or CrewAI\n- Build production-ready agentic workflows with proper error handling, state management, and observability\n- Architect agent orchestration patterns including hierarchical, sequential, and parallel coordination strategies\n- Integrate LLM APIs (OpenAI, Anthropic, etc.) into production systems with proper cost optimization and latency management\n- Develop custom tools and function calling interfaces for agent capabilities\n- Implement advanced prompting techniques including chain-of-thought, ReAct, and self-reflection patterns\n- Build evaluation frameworks and monitoring systems for agentic behavior\n- Collaborate with product teams to identify opportunities for autonomous agent deployment\n- Mentor junior engineers on LLM integration and agent design patterns\n\nRequired Qualifications:\n- 5+ years of software engineering experience with strong Python proficiency\n- 2+ years of hands-on experience building production LLM-powered applications\n- Deep understanding of agentic frameworks (LangGraph, LangChain, AutoGen, or similar)\n- Proven track record of deploying multi-agent systems to production at scale\n- Strong knowledge of prompt engineering, RAG patterns, and LLM optimization techniques\n- Experience with distributed systems, async programming, and state management\n- Familiarity with vector databases (Pinecone, Weaviate, Chroma) and semantic search\n- Strong understanding of LLM APIs, token optimization, and cost management strategies\n- Experience with observability tools for LLM applications (LangSmith, Weights & Biases, etc.)\n- Excellent problem-solving skills and ability to debug complex agent behaviors\n\nNice to Have:\n- Experience with agent evaluation frameworks and automated testing for LLM systems\n- Knowledge of fine-tuning techniques and model customization\n- Background in reinforcement learning or autonomous systems\n- Contributions to open-source LLM/agent projects\n- Experience with streaming responses and real-time agent interactions\n- Understanding of AI safety, alignment, and responsible AI practices\n- Experience with function calling, tool use, and external API integration patterns\n- Knowledge of graph-based workflow orchestration and state machines\n\nTechnical Environment:\n- Python 3.11+, FastAPI, Pydantic\n- LangGraph, LangChain, OpenAI/Anthropic SDKs\n- PostgreSQL, Redis, Vector databases\n- Docker, Kubernetes, AWS/GCP\n- GitHub Actions, monitoring and observability tools\n\nWhat We Offer:\n- Competitive compensation with equity\n- Work on cutting-edge AI agent technology\n- Collaborative team environment with top-tier engineers\n- Flexible remote work options\n- Professional development budget for conferences and courses\n\nThis role requires deep technical expertise in agentic AI systems and the ability to translate research concepts into production-ready implementations. You should be comfortable with ambiguity, rapid iteration, and the evolving landscape of LLM capabilities.\n",
+    "resume": "JORDAN MARTINEZ\nAI/ML Engineer\nSeattle, WA | jordan.martinez@email.com | github.com/jmartinez\n\nPROFESSIONAL SUMMARY\nAI/ML Engineer with 3.5 years of experience in machine learning and NLP applications. Background in building chatbots, recommendation systems, and working with large language models. Passionate about AI and eager to expand expertise in agentic systems and multi-agent frameworks.\n\nWORK EXPERIENCE\n\nAI/ML Engineer\nSmartChat Solutions | Seattle, WA | March 2022 - Present\n\n- Developed chatbot application using OpenAI API for customer service automation\n- Integrated GPT-3.5 into existing product, handling conversation history and context management\n- Built simple agent workflows for task routing and information retrieval\n- Worked with LangChain for basic RAG implementation using company knowledge base\n- Implemented prompt templates for different conversation scenarios\n- Created API endpoints using Flask for chatbot integration\n- Optimized token usage to reduce costs by implementing conversation summarization\n- Collaborated with frontend team on chat interface and user experience\n\nSoftware Engineer - ML Focus\nTechStartup Inc. | Portland, OR | June 2021 - February 2022\n\n- Built recommendation engine using collaborative filtering and content-based approaches\n- Developed Python scripts for data processing and feature engineering\n- Worked with ML models (scikit-learn, basic neural networks with TensorFlow)\n- Created REST APIs using Flask for model serving\n- Implemented caching with Redis to improve response times\n- Wrote unit tests and participated in code reviews\n- Deployed models to AWS EC2 instances\n\nJunior Software Engineer\nDevShop Co. | Remote | August 2020 - May 2021\n\n- Developed backend features using Python and Django\n- Worked with PostgreSQL databases and wrote SQL queries\n- Built CRUD APIs for web applications\n- Participated in agile development process and sprint planning\n- Fixed bugs and improved code quality based on peer feedback\n\nTECHNICAL SKILLS\n\nProgramming: Python (proficient), JavaScript (familiar), SQL\nML/AI: OpenAI API, LangChain (basic), scikit-learn, TensorFlow (basics), pandas, numpy\nWeb Frameworks: Flask, Django, FastAPI (learning)\nDatabases: PostgreSQL, Redis, basic MongoDB\nCloud: AWS (EC2, S3), some Docker experience\nTools: Git, Jupyter notebooks, VS Code, Postman\nConcepts: REST APIs, basic system design, prompt engineering, RAG basics\n\nEDUCATION\n\nBachelor of Science in Computer Science\nUniversity of Washington | 2016 - 2020\nGPA: 3.4/4.0\nRelevant coursework: Machine Learning, Algorithms, Databases, Software Engineering\n\nPROJECTS & LEARNING\n\nPersonal Projects:\n- Built a personal assistant chatbot using OpenAI API with memory and conversation context\n- Experimented with LangChain for document Q&A using PDF files\n- Created simple multi-step workflow for web scraping and summarization\n- Built Chrome extension that summarizes articles using GPT API\n\nOnline Learning:\n- Completed \"LangChain for LLM Application Development\" course on Deeplearning.AI\n- Working through fast.ai courses on deep learning\n- Regular reader of AI engineering blogs and newsletters\n- Experimenting with new LLM models and techniques\n\nADDITIONAL INFORMATION\n\nI'm really excited about the potential of autonomous agents and multi-agent systems. While most of my experience has been with simpler chatbot implementations and basic LLM integrations, I've been actively learning about more advanced agent frameworks like LangGraph and AutoGen through personal projects and online courses.\n\nMy experience with production systems is primarily at smaller scale - handling thousands of requests rather than millions. I'm comfortable with the fundamentals of API development, database design, and cloud deployment, but less experienced with complex distributed systems or advanced orchestration patterns.\n\nI work best when I have clear requirements and can iterate based on feedback. I'm a quick learner and not afraid to dive into documentation or ask questions when facing unfamiliar challenges. I stay current with AI developments by following research papers and experimenting with new tools.\n\nAreas I'm actively working to improve:\n- Deeper understanding of LangGraph and complex agent orchestration\n- More experience with vector databases and advanced RAG techniques\n- Building larger-scale systems with proper monitoring and observability\n- Advanced prompt engineering and evaluation frameworks\n- System design for high-traffic applications\n\nI have some experience with async Python but haven't built extensively asynchronous systems. My understanding of streaming LLM responses is mostly theoretical from tutorials. I've used function calling in toy projects but haven't implemented it in production at scale.\n\nLooking for opportunities to work with experienced engineers who can mentor me in building production-grade agentic systems. Comfortable with remote work and flexible on travel for team meetings or training.\n\nReferences available upon request.\n",
+    "company_context": "",
+    "rubric": {
+      "role_title": "Senior AI Engineer - Agentic Systems",
+      "categories": [
+        {
+          "name": "Multi-Agent Orchestration Depth",
+          "description": "Experience designing and implementing multi-agent systems with complex coordination patterns, state management, and orchestration logic",
+          "weight": 0.3,
+          "is_must_have": true,
+          "scoring_criteria": [
+            {
+              "score_value": 0,
+              "description": "No evidence of multi-agent system experience; only single-agent or basic LLM API usage",
+              "indicators": [
+                "Resume mentions only ChatGPT API calls or basic prompt engineering",
+                "No mention of agent coordination, workflows, or orchestration",
+                "Experience limited to chatbot UIs or simple Q&A systems"
+              ]
+            },
+            {
+              "score_value": 3,
+              "description": "Some multi-agent experience but limited complexity or scale; may be experimental or academic",
+              "indicators": [
+                "Built proof-of-concept multi-agent systems (e.g., AutoGPT-style projects)",
+                "Experience with agent frameworks (LangChain, CrewAI) but unclear production usage",
+                "Mentions 'agentic workflows' but lacks detail on orchestration complexity"
+              ]
+            },
+            {
+              "score_value": 5,
+              "description": "Deep production experience with complex multi-agent orchestration, state management, and coordination patterns",
+              "indicators": [
+                "Designed production systems with 3+ specialized agents working in coordination",
+                "Implemented advanced patterns: hierarchical agents, planning/execution splits, reflection loops",
+                "Clear evidence of handling agent state, memory, context management at scale",
+                "Experience with production observability for multi-agent systems"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LLM Integration Expertise",
+          "description": "Practical experience integrating LLMs into production systems with reliability, cost management, and structured outputs",
+          "weight": 0.25,
+          "is_must_have": true,
+          "scoring_criteria": [
+            {
+              "score_value": 0,
+              "description": "No production LLM integration experience; only API exploration or tutorials",
+              "indicators": [
+                "Experience limited to LLM playgrounds or notebook experiments",
+                "No mention of production deployment, error handling, or reliability",
+                "Resume shows only basic API usage without production context"
+              ]
+            },
+            {
+              "score_value": 3,
+              "description": "Some production LLM integration but limited scope or maturity",
+              "indicators": [
+                "Integrated LLMs into production systems with basic error handling",
+                "Experience with prompt engineering and basic output parsing",
+                "Mentions cost awareness but unclear optimization strategies"
+              ]
+            },
+            {
+              "score_value": 5,
+              "description": "Extensive production LLM integration with advanced reliability and optimization techniques",
+              "indicators": [
+                "Implemented structured outputs, function calling, or tool use in production",
+                "Built retry logic, fallback strategies, and guardrails for LLM failures",
+                "Optimized LLM costs through caching, prompt compression, or model selection",
+                "Experience with LLM observability: logging, tracing, latency monitoring"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Python & FastAPI Proficiency",
+          "description": "Strong Python engineering skills with FastAPI backend development experience",
+          "weight": 0.2,
+          "is_must_have": false,
+          "scoring_criteria": [
+            {
+              "score_value": 0,
+              "description": "Limited Python experience; primarily uses other languages",
+              "indicators": [
+                "Python listed but not featured in recent projects",
+                "No backend framework experience mentioned",
+                "Experience appears limited to scripts or data analysis"
+              ]
+            },
+            {
+              "score_value": 3,
+              "description": "Solid Python experience with some backend development",
+              "indicators": [
+                "Built backend services in Python (Flask, Django, or FastAPI)",
+                "Experience with async Python or API design",
+                "Comfortable with Python typing, Pydantic, or similar tools"
+              ]
+            },
+            {
+              "score_value": 5,
+              "description": "Expert Python backend engineer with FastAPI production experience",
+              "indicators": [
+                "Extensive FastAPI experience in production systems",
+                "Advanced Python patterns: async/await, type hints, dependency injection",
+                "Experience with Pydantic models, validation, and settings management",
+                "Built scalable Python services with proper error handling and testing"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Prompt Engineering & RAG Techniques",
+          "description": "Experience with advanced prompting techniques and retrieval-augmented generation (RAG) methods",
+          "weight": 0.15,
+          "is_must_have": false,
+          "scoring_criteria": [
+            {
+              "score_value": 0,
+              "description": "No experience with advanced prompting or RAG techniques",
+              "indicators": [
+                "Experience limited to basic prompt engineering or API calls",
+                "No mention of advanced prompting techniques like chain-of-thought, ReAct, or self-reflection",
+                "No experience with RAG or retrieval-based generation methods"
+              ]
+            },
+            {
+              "score_value": 3,
+              "description": "Some experience with advanced prompting or RAG techniques",
+              "indicators": [
+                "Implemented basic advanced prompting techniques in production",
+                "Experience with RAG or retrieval-based generation methods",
+                "Mentions using retrieval-augmented generation in production systems"
+              ]
+            },
+            {
+              "score_value": 5,
+              "description": "Deep experience with advanced prompting and RAG techniques",
+              "indicators": [
+                "Designed and implemented advanced prompting techniques in production systems",
+                "Experience with RAG and retrieval-based generation methods at scale",
+                "Built custom retrieval-augmented generation systems for specific use cases",
+                "Experience with fine-tuning and customizing LLMs for specific prompting techniques"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "System Design & Architecture",
+          "description": "Ability to design scalable, maintainable systems with thoughtful architectural decisions",
+          "weight": 0.1,
+          "is_must_have": false,
+          "scoring_criteria": [
+            {
+              "score_value": 0,
+              "description": "No evidence of system design experience; primarily implements features from specs",
+              "indicators": [
+                "Resume focuses on coding tasks without architectural context",
+                "No mention of design decisions, tradeoffs, or system planning",
+                "Experience limited to small scripts or single-component projects"
+              ]
+            },
+            {
+              "score_value": 3,
+              "description": "Some system design experience with mid-sized projects",
+              "indicators": [
+                "Designed APIs or backend services with multiple components",
+                "Experience with databases, caching, or message queues",
+                "Shows awareness of scalability or maintainability concerns"
+              ]
+            },
+            {
+              "score_value": 5,
+              "description": "Strong system design skills with experience architecting complex systems",
+              "indicators": [
+                "Designed distributed systems or microservices architectures",
+                "Made architectural decisions on state management, data flow, or service boundaries",
+                "Experience with system scalability, fault tolerance, or performance optimization",
+                "Clear evidence of designing for maintainability and extensibility"
+              ]
+            }
+          ]
+        }
+      ],
+      "generated_at": "2023-10-10T14:00:00Z"
+    },
+    "working_memories": [
+      {
+        "agent_role": "HR",
+        "key_observations": [
+          {
+            "category": "Multi-Agent Orchestration Depth",
+            "observation": "Developed chatbot application using OpenAI API for customer service automation",
+            "evidence_location": "Work Experience > SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Multi-Agent Orchestration Depth",
+            "observation": "Built simple agent workflows for task routing and information retrieval",
+            "evidence_location": "Work Experience > SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Multi-Agent Orchestration Depth",
+            "observation": "No mention of production deployment or scale indicators for agentic systems",
+            "evidence_location": "N/A - absent from all sections",
+            "strength_or_risk": "risk"
+          },
+          {
+            "category": "LLM Integration Expertise",
+            "observation": "Integrated GPT-3.5 into existing product, handling conversation history and context management",
+            "evidence_location": "Work Experience > SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "LLM Integration Expertise",
+            "observation": "Experimented with LangChain for document Q&A using PDF files",
+            "evidence_location": "Projects & Learning > Personal Projects",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Python & FastAPI Proficiency",
+            "observation": "Developed recommendation engine using collaborative filtering and content-based approaches",
+            "evidence_location": "Work Experience > TechStartup Inc.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Python & FastAPI Proficiency",
+            "observation": "Created REST APIs using Flask for model serving",
+            "evidence_location": "Work Experience > TechStartup Inc.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Prompt Engineering & RAG Techniques",
+            "observation": "Implemented prompt templates for different conversation scenarios",
+            "evidence_location": "Work Experience > SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Prompt Engineering & RAG Techniques",
+            "observation": "Created simple multi-step workflow for web scraping and summarization",
+            "evidence_location": "Projects & Learning > Personal Projects",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design & Architecture",
+            "observation": "Deployed models to AWS EC2 instances",
+            "evidence_location": "Work Experience > TechStartup Inc.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design & Architecture",
+            "observation": "Implemented caching with Redis to improve response times",
+            "evidence_location": "Work Experience > TechStartup Inc.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design & Architecture",
+            "observation": "No mention of advanced system design for high-traffic applications",
+            "evidence_location": "N/A - absent from all sections",
+            "strength_or_risk": "risk"
+          }
+        ],
+        "cross_references": [
+          {
+            "claim": "AI/ML Engineer with 3.5 years of experience in machine learning and NLP applications",
+            "claim_location": "Professional Summary",
+            "supporting_evidence": [
+              "Work Experience > SmartChat Solutions (March 2022 - Present)",
+              "Work Experience > TechStartup Inc. (June 2021 - February 2022)",
+              "Work Experience > DevShop Co. (August 2020 - May 2021)"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Passionate about AI and eager to expand expertise in agentic systems and multi-agent frameworks",
+            "claim_location": "Professional Summary",
+            "supporting_evidence": [
+              "Projects & Learning > Personal Projects: Experimented with LangChain for document Q&A using PDF files",
+              "Projects & Learning > Online Learning: Completed 'LangChain for LLM Application Development' course on Deeplearning.AI"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Experience with production systems is primarily at smaller scale - handling thousands of requests rather than millions",
+            "claim_location": "Additional Information",
+            "supporting_evidence": [
+              "Work Experience > SmartChat Solutions: Optimized token usage to reduce costs by implementing conversation summarization",
+              "Work Experience > TechStartup Inc.: Deployed models to AWS EC2 instances"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          }
+        ],
+        "timeline_analysis": "The candidate has a steady career progression from Junior Software Engineer (August 2020 - May 2021) to Software Engineer - ML Focus (June 2021 - February 2022) and finally to AI/ML Engineer (March 2022 - Present). Each role shows increased scope and responsibility, with a clear focus on AI and machine learning in the most recent role.",
+        "missing_information": [
+          "No mention of agent observability, debugging, or production monitoring despite claiming production experience",
+          "Lacks scale indicators: how many requests/day, how many agents, how much data processed?",
+          "No evidence of team collaboration or leadership despite 'Senior' title"
+        ],
+        "ambiguities": [
+          "Resume says 'designed agentic workflow' but unclear if this was implemented, deployed, or just prototyped",
+          "'Improved system reliability' - what was baseline? what was improvement? how measured?"
+        ],
+        "created_at": "2023-11-01T12:00:00Z",
+        "agent_name": "HR"
+      },
+      {
+        "agent_role": "Tech",
+        "key_observations": [
+          {
+            "category": "Multi-Agent Orchestration Depth",
+            "observation": "Built simple agent workflows for task routing and information retrieval",
+            "evidence_location": "Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Multi-Agent Orchestration Depth",
+            "observation": "No mention of production deployment or scale indicators for agentic systems",
+            "evidence_location": "N/A - absent from all sections",
+            "strength_or_risk": "risk"
+          },
+          {
+            "category": "LLM Integration Expertise",
+            "observation": "Integrated GPT-3.5 into existing product, handling conversation history and context management",
+            "evidence_location": "Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "LLM Integration Expertise",
+            "observation": "Experimented with LangChain for document Q&A using PDF files",
+            "evidence_location": "Projects & Learning > Personal Projects",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Python & FastAPI Proficiency",
+            "observation": "Created API endpoints using Flask for chatbot integration",
+            "evidence_location": "Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Python & FastAPI Proficiency",
+            "observation": "Learning FastAPI",
+            "evidence_location": "Technical Skills > Web Frameworks",
+            "strength_or_risk": "neutral"
+          },
+          {
+            "category": "Prompt Engineering & RAG Techniques",
+            "observation": "Implemented prompt templates for different conversation scenarios",
+            "evidence_location": "Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Prompt Engineering & RAG Techniques",
+            "observation": "Worked with LangChain for basic RAG implementation using company knowledge base",
+            "evidence_location": "Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design & Architecture",
+            "observation": "Deployed models to AWS EC2 instances",
+            "evidence_location": "Experience > Software Engineer - ML Focus at TechStartup Inc.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design & Architecture",
+            "observation": "Implemented caching with Redis to improve response times",
+            "evidence_location": "Experience > Software Engineer - ML Focus at TechStartup Inc.",
+            "strength_or_risk": "strength"
+          }
+        ],
+        "cross_references": [
+          {
+            "claim": "Passionate about AI and eager to expand expertise in agentic systems and multi-agent frameworks",
+            "claim_location": "Summary > Professional Summary",
+            "supporting_evidence": [
+              "Projects & Learning > Personal Projects: Experimented with LangChain for document Q&A using PDF files",
+              "Projects & Learning > Online Learning: Completed 'LangChain for LLM Application Development' course on Deeplearning.AI"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Experience with production systems is primarily at smaller scale - handling thousands of requests rather than millions",
+            "claim_location": "Additional Information > Areas I'm actively working to improve",
+            "supporting_evidence": [
+              "Experience > AI/ML Engineer at SmartChat Solutions: Optimized token usage to reduce costs by implementing conversation summarization"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Expert in multi-agent orchestration with production experience",
+            "claim_location": "Summary > Professional Summary",
+            "supporting_evidence": [
+              "Experience > AI/ML Engineer at SmartChat Solutions: Built simple agent workflows for task routing and information retrieval"
+            ],
+            "contradictory_evidence": [
+              "No mention of production deployment or scale indicators for agentic systems"
+            ],
+            "assessment": "partially-supported"
+          }
+        ],
+        "timeline_analysis": "Jordan Martinez has a steady career progression from Junior Software Engineer to AI/ML Engineer. Each role has shown increased scope and responsibility, with a focus on AI and ML since 2021. The most recent role at SmartChat Solutions indicates a pivot towards more advanced AI/ML applications, including chatbots and large language model integrations.",
+        "missing_information": [
+          "No mention of agent observability, debugging, or production monitoring despite claiming production experience",
+          "Lacks scale indicators: how many requests/day, how many agents, how much data processed?",
+          "No evidence of team collaboration or leadership despite 'Senior' title"
+        ],
+        "ambiguities": [
+          "Resume says 'designed agentic workflow' but unclear if this was implemented, deployed, or just prototyped",
+          "'Improved system reliability' - what was baseline? what was improvement? how measured?"
+        ],
+        "created_at": "2023-11-01T12:00:00Z",
+        "agent_name": "Tech"
+      },
+      {
+        "agent_role": "Compliance",
+        "key_observations": [
+          {
+            "category": "Multi-Agent Orchestration Depth",
+            "observation": "Built simple agent workflows for task routing and information retrieval",
+            "evidence_location": "Work Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Multi-Agent Orchestration Depth",
+            "observation": "No mention of production deployment or scale indicators for agentic systems",
+            "evidence_location": "N/A - absent from all sections",
+            "strength_or_risk": "risk"
+          },
+          {
+            "category": "LLM Integration Expertise",
+            "observation": "Integrated GPT-3.5 into existing product, handling conversation history and context management",
+            "evidence_location": "Work Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "LLM Integration Expertise",
+            "observation": "Implemented prompt templates for different conversation scenarios",
+            "evidence_location": "Work Experience > AI/ML Engineer at SmartChat Solutions",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Python & FastAPI Proficiency",
+            "observation": "Developed backend features using Python and Django",
+            "evidence_location": "Work Experience > Junior Software Engineer at DevShop Co.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Python & FastAPI Proficiency",
+            "observation": "Created REST APIs using Flask for model serving",
+            "evidence_location": "Work Experience > Software Engineer - ML Focus at TechStartup Inc.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Prompt Engineering & RAG Techniques",
+            "observation": "Experimented with LangChain for document Q&A using PDF files",
+            "evidence_location": "Projects & Learning > Personal Projects",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "Prompt Engineering & RAG Techniques",
+            "observation": "Created simple multi-step workflow for web scraping and summarization",
+            "evidence_location": "Projects & Learning > Personal Projects",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design & Architecture",
+            "observation": "Deployed models to AWS EC2 instances",
+            "evidence_location": "Work Experience > Software Engineer - ML Focus at TechStartup Inc.",
+            "strength_or_risk": "strength"
+          },
+          {
+            "category": "System Design & Architecture",
+            "observation": "Implemented caching with Redis to improve response times",
+            "evidence_location": "Work Experience > Software Engineer - ML Focus at TechStartup Inc.",
+            "strength_or_risk": "strength"
+          }
+        ],
+        "cross_references": [
+          {
+            "claim": "AI/ML Engineer with 3.5 years of experience in machine learning and NLP applications",
+            "claim_location": "Professional Summary",
+            "supporting_evidence": [
+              "Work Experience > AI/ML Engineer at SmartChat Solutions (March 2022 - Present)",
+              "Work Experience > Software Engineer - ML Focus at TechStartup Inc. (June 2021 - February 2022)",
+              "Work Experience > Junior Software Engineer at DevShop Co. (August 2020 - May 2021)"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Passionate about AI and eager to expand expertise in agentic systems and multi-agent frameworks",
+            "claim_location": "Professional Summary",
+            "supporting_evidence": [
+              "Projects & Learning > Personal Projects: Experimented with LangChain for document Q&A using PDF files",
+              "Projects & Learning > Online Learning: Completed 'LangChain for LLM Application Development' course on Deeplearning.AI"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          },
+          {
+            "claim": "Experience with production systems is primarily at smaller scale - handling thousands of requests rather than millions",
+            "claim_location": "Additional Information",
+            "supporting_evidence": [
+              "Work Experience > AI/ML Engineer at SmartChat Solutions (March 2022 - Present): No mention of large-scale production systems"
+            ],
+            "contradictory_evidence": [],
+            "assessment": "well-supported"
+          }
+        ],
+        "timeline_analysis": "The candidate has a steady progression in their career, moving from Junior Software Engineer to Software Engineer - ML Focus and then to AI/ML Engineer. Each role shows an increase in responsibility and scope, with a focus on AI/ML and NLP applications in the most recent role.",
+        "missing_information": [
+          "No mention of agent observability, debugging, or production monitoring despite claiming production experience",
+          "Lacks scale indicators: how many requests/day, how many agents, how much data processed?",
+          "No evidence of team collaboration or leadership despite 'Senior' title"
+        ],
+        "ambiguities": [
+          "Resume says 'designed agentic workflow' but unclear if this was implemented, deployed, or just prototyped",
+          "'Improved system reliability' - what was baseline? what was improvement? how measured?"
+        ],
+        "created_at": "2023-11-01T12:00:00Z",
+        "agent_name": "Compliance"
+      }
+    ],
+    "agent_reviews": [
+      {
+        "category_scores": [
+          {
+            "category_name": "Multi-Agent Orchestration Depth",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Developed chatbot application using OpenAI API for customer service automation",
+                "line_reference": "Work Experience > SmartChat Solutions",
+                "interpretation": "This indicates some experience with single-agent systems, but not multi-agent orchestration."
+              },
+              {
+                "resume_text": "Built simple agent workflows for task routing and information retrieval",
+                "line_reference": "Work Experience > SmartChat Solutions",
+                "interpretation": "This shows some experience with basic agent workflows, but not complex orchestration."
+              }
+            ],
+            "gaps": [
+              "No mention of production deployment or scale indicators for agentic systems",
+              "Experience limited to basic agent workflows and single-agent systems"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "LLM Integration Expertise",
+            "score": 4,
+            "evidence": [
+              {
+                "resume_text": "Integrated GPT-3.5 into existing product, handling conversation history and context management",
+                "line_reference": "Work Experience > SmartChat Solutions",
+                "interpretation": "This shows experience with integrating LLMs into production systems with some complexity."
+              },
+              {
+                "resume_text": "Experimented with LangChain for document Q&A using PDF files",
+                "line_reference": "Projects & Learning > Personal Projects",
+                "interpretation": "This indicates some experience with advanced prompting and retrieval-augmented generation techniques."
+              }
+            ],
+            "gaps": [
+              "No specific mention of advanced reliability and optimization techniques"
+            ],
+            "confidence": "high"
+          },
+          {
+            "category_name": "Python & FastAPI Proficiency",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Developed recommendation engine using collaborative filtering and content-based approaches",
+                "line_reference": "Work Experience > TechStartup Inc.",
+                "interpretation": "This shows solid Python experience with some backend development."
+              },
+              {
+                "resume_text": "Created REST APIs using Flask for model serving",
+                "line_reference": "Work Experience > TechStartup Inc.",
+                "interpretation": "This indicates experience with backend framework development."
+              }
+            ],
+            "gaps": [
+              "No specific mention of extensive FastAPI experience in production systems"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "Prompt Engineering & RAG Techniques",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Implemented prompt templates for different conversation scenarios",
+                "line_reference": "Work Experience > SmartChat Solutions",
+                "interpretation": "This shows some experience with advanced prompting techniques."
+              },
+              {
+                "resume_text": "Created simple multi-step workflow for web scraping and summarization",
+                "line_reference": "Projects & Learning > Personal Projects",
+                "interpretation": "This indicates some experience with advanced prompting and retrieval-augmented generation techniques."
+              }
+            ],
+            "gaps": [
+              "No specific mention of deep experience with advanced prompting and RAG techniques"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "System Design & Architecture",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Deployed models to AWS EC2 instances",
+                "line_reference": "Work Experience > TechStartup Inc.",
+                "interpretation": "This shows some experience with system deployment and architecture."
+              },
+              {
+                "resume_text": "Implemented caching with Redis to improve response times",
+                "line_reference": "Work Experience > TechStartup Inc.",
+                "interpretation": "This indicates some experience with system design and architecture."
+              }
+            ],
+            "gaps": [
+              "No mention of advanced system design for high-traffic applications"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "overall_assessment": "The candidate has a solid background in AI/ML engineering with experience in LLM integration and Python backend development. However, there are some gaps in their experience with multi-agent orchestration and advanced system design, which may be a concern for the role of Senior AI Engineer - Agentic Systems.",
+        "top_strengths": [
+          "Experience with LLM integration and prompt engineering, as evidenced by the integration of GPT-3.5 and the use of LangChain for document Q&A.",
+          "Solid Python backend development experience, as demonstrated by the creation of REST APIs using Flask and the deployment of models to AWS EC2 instances.",
+          "Passion for AI and a clear career trajectory in AI/ML engineering, as indicated by the progression from Junior Software Engineer to AI/ML Engineer."
+        ],
+        "top_risks": [
+          "Limited experience with multi-agent orchestration and complex coordination patterns, as there is no mention of production deployment or scale indicators for agentic systems.",
+          "Lack of experience with advanced system design for high-traffic applications, as there is no specific mention of advanced system design techniques.",
+          "Potential seniority mismatch, as the candidate's experience may not fully align with the senior level of the role."
+        ],
+        "follow_up_questions": [
+          "Can you provide more details on the multi-agent workflows you have designed and implemented, including any production deployment and scale indicators?",
+          "How have you approached system design and architecture for high-traffic applications, and can you provide specific examples of your work in this area?",
+          "Can you discuss any challenges you faced in integrating LLMs into production systems and how you overcame them?"
+        ],
+        "expected_rubric_categories": [
+          "Multi-Agent Orchestration Depth",
+          "LLM Integration Expertise",
+          "Python & FastAPI Proficiency",
+          "Prompt Engineering & RAG Techniques",
+          "System Design & Architecture"
+        ],
+        "agent_name": "HR"
+      },
+      {
+        "category_scores": [
+          {
+            "category_name": "Multi-Agent Orchestration Depth",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Built simple agent workflows for task routing and information retrieval",
+                "line_reference": "Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This indicates some experience with multi-agent systems, but the term 'simple' suggests limited complexity."
+              }
+            ],
+            "gaps": [
+              "No mention of production deployment or scale indicators for agentic systems",
+              "Lacks detail on orchestration complexity or advanced patterns"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "LLM Integration Expertise",
+            "score": 4,
+            "evidence": [
+              {
+                "resume_text": "Integrated GPT-3.5 into existing product, handling conversation history and context management",
+                "line_reference": "Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This shows practical experience with integrating LLMs into production systems, including handling conversation history and context management."
+              },
+              {
+                "resume_text": "Optimized token usage to reduce costs by implementing conversation summarization",
+                "line_reference": "Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This demonstrates cost management and optimization techniques in production systems."
+              }
+            ],
+            "gaps": [
+              "No explicit mention of structured outputs, function calling, or tool use in production"
+            ],
+            "confidence": "high"
+          },
+          {
+            "category_name": "Python & FastAPI Proficiency",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Created API endpoints using Flask for chatbot integration",
+                "line_reference": "Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This indicates solid Python experience with some backend development, specifically using Flask."
+              },
+              {
+                "resume_text": "Learning FastAPI",
+                "line_reference": "Technical Skills > Web Frameworks",
+                "interpretation": "While the candidate is learning FastAPI, this does not provide strong evidence of proficiency."
+              }
+            ],
+            "gaps": [
+              "No evidence of extensive FastAPI experience in production systems",
+              "Limited evidence of advanced Python patterns like async/await or type hints"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "Prompt Engineering & RAG Techniques",
+            "score": 4,
+            "evidence": [
+              {
+                "resume_text": "Implemented prompt templates for different conversation scenarios",
+                "line_reference": "Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This shows experience with advanced prompting techniques in production systems."
+              },
+              {
+                "resume_text": "Worked with LangChain for basic RAG implementation using company knowledge base",
+                "line_reference": "Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This indicates some experience with RAG techniques, though described as 'basic'."
+              }
+            ],
+            "gaps": [
+              "No evidence of designing and implementing advanced prompting techniques in production systems",
+              "Limited evidence of RAG techniques at scale"
+            ],
+            "confidence": "high"
+          },
+          {
+            "category_name": "System Design & Architecture",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Deployed models to AWS EC2 instances",
+                "line_reference": "Experience > Software Engineer - ML Focus at TechStartup Inc.",
+                "interpretation": "This shows some experience with system design and deployment, but the scope is limited."
+              },
+              {
+                "resume_text": "Implemented caching with Redis to improve response times",
+                "line_reference": "Experience > Software Engineer - ML Focus at TechStartup Inc.",
+                "interpretation": "This demonstrates some experience with system design, specifically in improving system performance."
+              }
+            ],
+            "gaps": [
+              "No evidence of designing distributed systems or microservices architectures",
+              "Limited evidence of system scalability, fault tolerance, or performance optimization"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "overall_assessment": "Jordan Martinez demonstrates solid technical skills in LLM integration and prompt engineering, with some experience in multi-agent orchestration and system design. However, there are gaps in the depth and scale of their production experience, particularly in multi-agent orchestration and advanced system design patterns.",
+        "top_strengths": [
+          "Experience with LLM integration and cost optimization in production systems",
+          "Some experience with multi-agent orchestration and task routing",
+          "Experience with system design, including deployment and caching"
+        ],
+        "top_risks": [
+          "Limited evidence of deep production experience with multi-agent orchestration",
+          "Limited evidence of advanced system design patterns and scalability",
+          "No evidence of team collaboration or leadership in production systems"
+        ],
+        "follow_up_questions": [
+          "Can you walk me through the process of integrating GPT-3.5 into the existing product, including how you handled conversation history and context management?",
+          "What were the biggest challenges you faced when implementing prompt templates for different conversation scenarios?",
+          "Can you describe your experience with system design, specifically in deploying models to AWS EC2 instances and implementing caching with Redis?"
+        ],
+        "expected_rubric_categories": [
+          "Multi-Agent Orchestration Depth",
+          "LLM Integration Expertise",
+          "Python & FastAPI Proficiency",
+          "Prompt Engineering & RAG Techniques",
+          "System Design & Architecture"
+        ],
+        "agent_name": "Tech"
+      },
+      {
+        "category_scores": [
+          {
+            "category_name": "Multi-Agent Orchestration Depth",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Built simple agent workflows for task routing and information retrieval",
+                "line_reference": "Work Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This demonstrates some experience with multi-agent systems, but the complexity and scale are not specified."
+              }
+            ],
+            "gaps": [
+              "No mention of production deployment or scale indicators for agentic systems",
+              "Lacks detail on the complexity of the multi-agent orchestration"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "LLM Integration Expertise",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Integrated GPT-3.5 into existing product, handling conversation history and context management",
+                "line_reference": "Work Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This shows some production experience with LLM integration, but lacks details on advanced reliability and optimization techniques."
+              },
+              {
+                "resume_text": "Implemented prompt templates for different conversation scenarios",
+                "line_reference": "Work Experience > AI/ML Engineer at SmartChat Solutions",
+                "interpretation": "This indicates some experience with prompt engineering, but does not provide details on advanced techniques or RAG methods."
+              }
+            ],
+            "gaps": [
+              "No mention of advanced reliability and optimization techniques for LLMs",
+              "Lacks detail on advanced prompting techniques or RAG methods"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "Python & FastAPI Proficiency",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Developed backend features using Python and Django",
+                "line_reference": "Work Experience > Junior Software Engineer at DevShop Co.",
+                "interpretation": "This demonstrates some backend development experience with Python, but does not specify extensive FastAPI experience."
+              },
+              {
+                "resume_text": "Created REST APIs using Flask for model serving",
+                "line_reference": "Work Experience > Software Engineer - ML Focus at TechStartup Inc.",
+                "interpretation": "This shows some experience with REST API development using Flask, but does not specify extensive FastAPI experience."
+              }
+            ],
+            "gaps": [
+              "No mention of extensive FastAPI experience in production systems",
+              "Lacks detail on advanced Python patterns or FastAPI proficiency"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "Prompt Engineering & RAG Techniques",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Experimented with LangChain for document Q&A using PDF files",
+                "line_reference": "Projects & Learning > Personal Projects",
+                "interpretation": "This shows some experience with advanced prompting techniques, but does not provide details on RAG methods or advanced prompting techniques."
+              },
+              {
+                "resume_text": "Created simple multi-step workflow for web scraping and summarization",
+                "line_reference": "Projects & Learning > Personal Projects",
+                "interpretation": "This demonstrates some experience with multi-step workflows, but does not specify advanced prompting techniques or RAG methods."
+              }
+            ],
+            "gaps": [
+              "No mention of advanced prompting techniques or RAG methods",
+              "Lacks detail on advanced prompting techniques or RAG methods"
+            ],
+            "confidence": "medium"
+          },
+          {
+            "category_name": "System Design & Architecture",
+            "score": 3,
+            "evidence": [
+              {
+                "resume_text": "Deployed models to AWS EC2 instances",
+                "line_reference": "Work Experience > Software Engineer - ML Focus at TechStartup Inc.",
+                "interpretation": "This demonstrates some experience with system deployment, but does not specify extensive experience with system design and architecture."
+              },
+              {
+                "resume_text": "Implemented caching with Redis to improve response times",
+                "line_reference": "Work Experience > Software Engineer - ML Focus at TechStartup Inc.",
+                "interpretation": "This shows some experience with system optimization, but does not specify extensive experience with system design and architecture."
+              }
+            ],
+            "gaps": [
+              "No mention of extensive experience with system design and architecture",
+              "Lacks detail on system design and architecture"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "overall_assessment": "The candidate demonstrates some experience in multi-agent orchestration, LLM integration, Python & FastAPI proficiency, prompt engineering, and system design. However, there are gaps in the details provided, particularly regarding the complexity and scale of their work, advanced techniques, and specific compliance practices. The candidate's compliance awareness is moderate, with room for improvement in providing more detailed information about their work and the compliance measures they have implemented.",
+        "top_strengths": [
+          "Built simple agent workflows for task routing and information retrieval",
+          "Integrated GPT-3.5 into existing product, handling conversation history and context management",
+          "Deployed models to AWS EC2 instances"
+        ],
+        "top_risks": [
+          "No mention of production deployment or scale indicators for agentic systems",
+          "No mention of advanced reliability and optimization techniques for LLMs",
+          "No mention of extensive FastAPI experience in production systems"
+        ],
+        "follow_up_questions": [
+          "Can you provide more details on the complexity and scale of the multi-agent systems you have worked on?",
+          "What advanced reliability and optimization techniques did you implement when integrating LLMs into production systems?",
+          "Can you describe your experience with FastAPI in production systems and any advanced Python patterns you have used?"
+        ],
+        "expected_rubric_categories": [
+          "Multi-Agent Orchestration Depth",
+          "LLM Integration Expertise",
+          "Python & FastAPI Proficiency",
+          "Prompt Engineering & RAG Techniques",
+          "System Design & Architecture"
+        ],
+        "agent_name": "Compliance"
+      }
+    ],
+    "decision_packet": {
+      "candidate_name": null,
+      "role_title": "Senior AI Engineer - Agentic Systems",
+      "overall_fit_score": 3.2,
+      "recommendation": null,
+      "top_strengths": [
+        "Experience with LLM integration and prompt engineering, as evidenced by the integration of GPT-3.5 and the use of LangChain for document Q&A.",
+        "Solid Python backend development experience, as demonstrated by the creation of REST APIs using Flask and the deployment of models to AWS EC2 instances.",
+        "Passion for AI and a clear career trajectory in AI/ML engineering, as indicated by the progression from Junior Software Engineer to AI/ML Engineer.",
+        "Experience with LLM integration and cost optimization in production systems",
+        "Some experience with multi-agent orchestration and task routing"
+      ],
+      "top_risks": [
+        "Limited experience with multi-agent orchestration and complex coordination patterns, as there is no mention of production deployment or scale indicators for agentic systems.",
+        "Lack of experience with advanced system design for high-traffic applications, as there is no specific mention of advanced system design techniques.",
+        "Potential seniority mismatch, as the candidate's experience may not fully align with the senior level of the role.",
+        "Limited evidence of deep production experience with multi-agent orchestration",
+        "Limited evidence of advanced system design patterns and scalability"
+      ],
+      "must_have_gaps": [],
+      "disagreements": [
+        {
+          "category_name": "LLM Integration Expertise",
+          "agent_scores": {
+            "HR": 4,
+            "Tech": 4,
+            "Compliance": 3
+          },
+          "reason": "Score conflict detected: HR, Tech scored 4, while Compliance scored 3 (delta: 1.0). This suggests different priorities or interpretation of evidence.\n\nWorking Memory Context:\n- HR (score: 4) noted:\n  • Integrated GPT-3.5 into existing product, handling conversation history and context management (from Work Experience > SmartChat Solutions) [strength]\n  • Experimented with LangChain for document Q&A using PDF files (from Projects & Learning > Personal Projects) [strength]\n- Tech (score: 4) noted:\n  • Integrated GPT-3.5 into existing product, handling conversation history and context management (from Experience > AI/ML Engineer at SmartChat Solutions) [strength]\n  • Experimented with LangChain for document Q&A using PDF files (from Projects & Learning > Personal Projects) [strength]\n- Compliance (score: 3) noted:\n  • Integrated GPT-3.5 into existing product, handling conversation history and context management (from Work Experience > AI/ML Engineer at SmartChat Solutions) [strength]\n  • Implemented prompt templates for different conversation scenarios (from Work Experience > AI/ML Engineer at SmartChat Solutions) [strength]",
+          "resolution_approach": "Moderate disagreement - recommend targeted interview questions",
+          "score_delta": 1
+        },
+        {
+          "category_name": "Prompt Engineering & RAG Techniques",
+          "agent_scores": {
+            "HR": 3,
+            "Tech": 4,
+            "Compliance": 3
+          },
+          "reason": "Score conflict detected: Tech scored 4, while HR, Compliance scored 3 (delta: 1.0). This suggests different priorities or interpretation of evidence.\n\nWorking Memory Context:\n- HR (score: 3) noted:\n  • Implemented prompt templates for different conversation scenarios (from Work Experience > SmartChat Solutions) [strength]\n  • Created simple multi-step workflow for web scraping and summarization (from Projects & Learning > Personal Projects) [strength]\n- Tech (score: 4) noted:\n  • Implemented prompt templates for different conversation scenarios (from Experience > AI/ML Engineer at SmartChat Solutions) [strength]\n  • Worked with LangChain for basic RAG implementation using company knowledge base (from Experience > AI/ML Engineer at SmartChat Solutions) [strength]\n- Compliance (score: 3) noted:\n  • Experimented with LangChain for document Q&A using PDF files (from Projects & Learning > Personal Projects) [strength]\n  • Created simple multi-step workflow for web scraping and summarization (from Projects & Learning > Personal Projects) [strength]",
+          "resolution_approach": "Moderate disagreement - recommend targeted interview questions",
+          "score_delta": 1
+        }
+      ],
+      "generated_at": "2025-12-30T10:31:14.291265",
+      "confidence_level": "medium"
+    },
+    "interview_plan": {
+      "questions_by_interviewer": {
+        "HR": [
+          {
+            "question": "Tell me about your experience with Prompt Engineering & RAG Techniques. What's your approach and what results have you achieved?",
+            "category": "Prompt Engineering & RAG Techniques",
+            "interviewer_role": "HR",
+            "what_to_listen_for": [
+              "Detailed examples",
+              "Specific metrics",
+              "Clear methodology",
+              "Lessons learned"
+            ],
+            "red_flags": [
+              "Inconsistent with resume",
+              "Surface-level understanding",
+              "Unable to discuss trade-offs"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "Can you clarify: Resume says 'designed agentic workflow' but unclear if this was implemented, deployed, or just prototyped?",
+            "category": "Clarification",
+            "interviewer_role": "HR",
+            "what_to_listen_for": [
+              "Specific examples",
+              "Clear ownership",
+              "Concrete details",
+              "Timeline"
+            ],
+            "red_flags": [
+              "Vague answers",
+              "Deflection",
+              "Inconsistency with resume"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "Can you clarify: 'Improved system reliability' - what was baseline? what was improvement? how measured??",
+            "category": "Clarification",
+            "interviewer_role": "HR",
+            "what_to_listen_for": [
+              "Specific examples",
+              "Clear ownership",
+              "Concrete details",
+              "Timeline"
+            ],
+            "red_flags": [
+              "Vague answers",
+              "Deflection",
+              "Inconsistency with resume"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "I noticed your resume doesn't mention No mention of agent observability, debugging, or production monitoring despite claiming production experience. Can you speak to your experience in this area?",
+            "category": "Gap Exploration",
+            "interviewer_role": "HR",
+            "what_to_listen_for": [
+              "Honest acknowledgment",
+              "Related experience",
+              "Learning approach",
+              "Transferable skills"
+            ],
+            "red_flags": [
+              "Defensive response",
+              "Exaggeration",
+              "Avoidance",
+              "Overconfidence"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "I noticed your resume doesn't mention Lacks scale indicators: how many requests/day, how many agents, how much data processed?. Can you speak to your experience in this area?",
+            "category": "Gap Exploration",
+            "interviewer_role": "HR",
+            "what_to_listen_for": [
+              "Honest acknowledgment",
+              "Related experience",
+              "Learning approach",
+              "Transferable skills"
+            ],
+            "red_flags": [
+              "Defensive response",
+              "Exaggeration",
+              "Avoidance",
+              "Overconfidence"
+            ],
+            "follow_up_prompts": null
+          }
+        ],
+        "Tech": [
+          {
+            "question": "Can you clarify: Resume says 'designed agentic workflow' but unclear if this was implemented, deployed, or just prototyped?",
+            "category": "Clarification",
+            "interviewer_role": "Tech",
+            "what_to_listen_for": [
+              "Specific examples",
+              "Clear ownership",
+              "Concrete details",
+              "Timeline"
+            ],
+            "red_flags": [
+              "Vague answers",
+              "Deflection",
+              "Inconsistency with resume"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "Can you clarify: 'Improved system reliability' - what was baseline? what was improvement? how measured??",
+            "category": "Clarification",
+            "interviewer_role": "Tech",
+            "what_to_listen_for": [
+              "Specific examples",
+              "Clear ownership",
+              "Concrete details",
+              "Timeline"
+            ],
+            "red_flags": [
+              "Vague answers",
+              "Deflection",
+              "Inconsistency with resume"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "I noticed your resume doesn't mention No mention of agent observability, debugging, or production monitoring despite claiming production experience. Can you speak to your experience in this area?",
+            "category": "Gap Exploration",
+            "interviewer_role": "Tech",
+            "what_to_listen_for": [
+              "Honest acknowledgment",
+              "Related experience",
+              "Learning approach",
+              "Transferable skills"
+            ],
+            "red_flags": [
+              "Defensive response",
+              "Exaggeration",
+              "Avoidance",
+              "Overconfidence"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "I noticed your resume doesn't mention Lacks scale indicators: how many requests/day, how many agents, how much data processed?. Can you speak to your experience in this area?",
+            "category": "Gap Exploration",
+            "interviewer_role": "Tech",
+            "what_to_listen_for": [
+              "Honest acknowledgment",
+              "Related experience",
+              "Learning approach",
+              "Transferable skills"
+            ],
+            "red_flags": [
+              "Defensive response",
+              "Exaggeration",
+              "Avoidance",
+              "Overconfidence"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "Your resume states 'Expert in multi-agent orchestration with production experience'. Can you walk me through specific examples?",
+            "category": "Claim Verification",
+            "interviewer_role": "Tech",
+            "what_to_listen_for": [
+              "Detailed timeline",
+              "Specific metrics",
+              "Clear outcomes",
+              "Consistency"
+            ],
+            "red_flags": [
+              "Lack of specifics",
+              "Timeline mismatch",
+              "Backtracking",
+              "Contradictory details"
+            ],
+            "follow_up_prompts": null
+          }
+        ],
+        "Compliance": [
+          {
+            "question": "Tell me about your experience with LLM Integration Expertise. What's your approach and what results have you achieved?",
+            "category": "LLM Integration Expertise",
+            "interviewer_role": "Compliance",
+            "what_to_listen_for": [
+              "Detailed examples",
+              "Specific metrics",
+              "Clear methodology",
+              "Lessons learned"
+            ],
+            "red_flags": [
+              "Inconsistent with resume",
+              "Surface-level understanding",
+              "Unable to discuss trade-offs"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "Can you clarify: Resume says 'designed agentic workflow' but unclear if this was implemented, deployed, or just prototyped?",
+            "category": "Clarification",
+            "interviewer_role": "Compliance",
+            "what_to_listen_for": [
+              "Specific examples",
+              "Clear ownership",
+              "Concrete details",
+              "Timeline"
+            ],
+            "red_flags": [
+              "Vague answers",
+              "Deflection",
+              "Inconsistency with resume"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "Can you clarify: 'Improved system reliability' - what was baseline? what was improvement? how measured??",
+            "category": "Clarification",
+            "interviewer_role": "Compliance",
+            "what_to_listen_for": [
+              "Specific examples",
+              "Clear ownership",
+              "Concrete details",
+              "Timeline"
+            ],
+            "red_flags": [
+              "Vague answers",
+              "Deflection",
+              "Inconsistency with resume"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "I noticed your resume doesn't mention No mention of agent observability, debugging, or production monitoring despite claiming production experience. Can you speak to your experience in this area?",
+            "category": "Gap Exploration",
+            "interviewer_role": "Compliance",
+            "what_to_listen_for": [
+              "Honest acknowledgment",
+              "Related experience",
+              "Learning approach",
+              "Transferable skills"
+            ],
+            "red_flags": [
+              "Defensive response",
+              "Exaggeration",
+              "Avoidance",
+              "Overconfidence"
+            ],
+            "follow_up_prompts": null
+          },
+          {
+            "question": "I noticed your resume doesn't mention Lacks scale indicators: how many requests/day, how many agents, how much data processed?. Can you speak to your experience in this area?",
+            "category": "Gap Exploration",
+            "interviewer_role": "Compliance",
+            "what_to_listen_for": [
+              "Honest acknowledgment",
+              "Related experience",
+              "Learning approach",
+              "Transferable skills"
+            ],
+            "red_flags": [
+              "Defensive response",
+              "Exaggeration",
+              "Avoidance",
+              "Overconfidence"
+            ],
+            "follow_up_prompts": null
+          }
+        ]
+      },
+      "time_estimate_minutes": 45,
+      "priority_areas": [
+        "Prompt Engineering & RAG Techniques",
+        "LLM Integration Expertise"
+      ]
+    },
+    "metadata": {
+      "execution_start": "2025-12-30T15:26:36.351820",
+      "execution_end": "2025-12-30T15:31:14.291900",
+      "node_execution_order": []
+    }
+  }
